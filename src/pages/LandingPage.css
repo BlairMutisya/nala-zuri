@@ -1,0 +1,294 @@
+/* Keep your imports and resets */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+
+/* Hero Section with Background Image */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Image takes full viewport height */
+  background: url(/public/bg-nalazuri.jpg) no-repeat center center/cover;
+}
+
+/* Overlay Effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content Inside the Hero Section */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.content h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: "Lora", serif;
+  font-weight: 300;
+}
+
+.content h1 {
+ font-family: "Poly", serif;
+  font-weight: 300;
+  font-size: 140px;
+}
+
+/* Social Icons */
+.social-icons {
+  position: absolute;
+  left: 30px;
+  bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+.social-icons svg:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+/* New Section Styling */
+.journey-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.journey-text {
+  flex: 1;
+  font-size: 22px;
+  font-weight: bold;
+  color: #D4AF37; /* Gold color */
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.underline {
+  width: 80%;
+  height: 2px;
+  background-color: #D4AF37;
+  margin-top: 10px;
+}
+
+.journey-content {
+  flex: 2;
+  font-size: 19px;
+  color: #333;
+  line-height: 1.6;
+font-family: "Playfair Display", serif;
+}
+
+.journey-content strong {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .journey-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .journey-text {
+    font-size: 20px;
+  }
+
+  .journey-content {
+    font-size: 16px;
+    padding-top: 20px;
+  
+  }
+}
+.full-width-image {
+  width: 60%;  
+  height: 70vh;
+  background: url('../../src/assets/Image1.jpg') no-repeat center center/cover;
+  margin: 0 auto;  
+  display: flex;    
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px; 
+}
+
+/* Nalazuri Travels Section */
+.nalazuri-travels-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.nalazuri-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.nalazuri-left h2 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.vertical-line {
+  width: 5px;
+  height: 120px;
+  background-color: #D4AF37; /* Gold color */
+}
+
+.nalazuri-right {
+  flex: 2;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+/* margin-left: -100px;
+margin-bottom: auto; */
+/* padding-left: 80px; */
+}
+
+.nalazuri-right strong {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nalazuri-travels-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nalazuri-left {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nalazuri-left h2 {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .vertical-line {
+    width: 50px;
+    height: 3px;
+    margin: 10px auto;
+  }
+
+  .nalazuri-right {
+    font-size: 16px;
+  }
+}
+.blog-section {
+  margin-top: 100px; /* Creates separation from previous section */
+}
+
+.blog-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto; /* Adds spacing */
+  text-align: left;
+  margin-left: 30px;
+}
+
+.blog-images {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.blog-img {
+  width: 100%;
+  height: 450px;
+  margin-top: 40px;
+}
+.blog-title {
+  font-size: 2.5rem; 
+  font-weight: bold;
+  text-align: center; 
+  padding-left: 20px; 
+  color: #222; 
+  margin-bottom: 20px; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+}
+.main-img {
+  transform: scale(1.1);
+
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .blog-images {
+    gap: 10px; /* Reduce gap between images */
+  }
+
+  .blog-img {
+    height: 50px; /* Reduce image height */
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 2rem; /* Reduce title size */
+  }
+
+  .blog-images {
+    gap: 20px; /* Reduce spacing further */
+  }
+
+  .blog-img {
+    height: 300px; /* Further reduce height but keep same layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-title {
+    font-size: 1.8rem; /* Adjust title size for mobile */
+  }
+
+  .blog-images {
+    gap: 10px;
+  }
+
+  .blog-img {
+    height: 50px; /* Smallest size for mobile */
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 50px;
+  }
+}
