@@ -4,9 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
-// import AboutPage from "./pages/AboutPage";
-// import ContactPage from "./pages/ContactPage";
-// import TicketsPage from "./pages/TicketsPage";
+import HowToExplore from './pages/How';
+import MakeADifference from "./pages/MakeADifference";
+import OurStory from "./pages/OurStory";
 
 function App() {
   return (
@@ -14,9 +14,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* <Route path="/about" element={<AboutPage />} /> */}
-        {/* <Route path="/contact" element={<ContactPage />} />
-        <Route path="/tickets" element={<TicketsPage />} /> */}
+        <Route path="/how" element={<HowToExplore />} />
+        <Route path="/makeadifference" element={<MakeADifference />} />
+        <Route path= "/ourstory" element={< OurStory />} />
+        {/* <Route path="/tickets" element={<TicketsPage />} /> */}
       </Routes>
       {/* <Footer /> */}
     </div>

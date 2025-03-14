@@ -1,0 +1,104 @@
+/* HowToExplore.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap'); 
+
+.how-to-explore {
+  flex: 2;
+  font-size: 19px;
+  color: #333;
+  line-height: 1.6;
+font-family: "Playfair Display", serif;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('../assets/HowToExplore.jpg') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+ font-family: "Poly", serif;
+  font-weight: 300;
+  font-size: 120px;
+}
+
+
+.explore-description {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333;
+  max-width: 800px;
+  margin: 50px auto;
+  line-height: 1.6;
+  font-family: "Playfair Display", serif;
+}
+
+
+
+/* Section Styling */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-image {
+  width: 70%;
+  height: auto; /* Ensures the image scales properly */
+  max-height: 500px; /* Adjust as needed */
+  max-width: 500px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.section-content {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.section-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-content p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .section:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .section-content {
+    padding: 0 30px;
+  }
+}

@@ -21,7 +21,7 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className="nav-links">
 <li>
-  <nav-link to="/" exact activeClassName="active">DISCOVER</nav-link>
+  <Link to="/" exact activeClassName="active">DISCOVER</Link>
 </li>
 
 
@@ -110,7 +110,10 @@ const Navbar = () => {
           <Link to="/inquiries">INQUIRIES</Link>
         </li>
         <li>
-          <Link to="/donation">DONATION</Link>
+          <Link to="/makeadifference">MAKE A DIFFERENCE</Link>
+        </li>
+                <li>
+          <Link to="/ourstory">OUR STORY</Link>
         </li>
       </ul>
 
