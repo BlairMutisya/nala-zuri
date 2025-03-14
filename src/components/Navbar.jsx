@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-router-dom"; // For navigation
+import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -9,32 +9,39 @@ const Navbar = () => {
   const [safarisOpen, setSafarisOpen] = useState(false);
   const [swahiliOpen, setSwahiliOpen] = useState(false);
 
+  const location = useLocation(); // Get current route
+
   return (
     <nav className="navbar">
-      {/* Home Link Added to Logo */}
+      {/* Logo */}
       <div className="logo">
-        <Link to="/">
+        <Link to="/" onClick={() => setMenuOpen(false)}>
           <img src="/Nalazuri logo.png" alt="Logo" />
         </Link>
       </div>
 
       {/* Desktop Menu */}
       <ul className="nav-links">
-<li>
-  <Link to="/" exact activeClassName="active">DISCOVER</Link>
-</li>
+        <li>
+          <Link
+            to="/"
+            className={location.pathname === "/" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
+            DISCOVER
+          </Link>
+        </li>
 
-
-        {/* Dropdown for When & Where */}
+        {/* WHEN & WHERE Dropdown */}
         <li
           className="dropdown"
           onMouseEnter={() => setDropdownOpen(true)}
           onMouseLeave={() => setDropdownOpen(false)}
         >
-          WHEN & WHERE
+          WHEN & WHERE ▾
           {dropdownOpen && (
             <ul className="dropdown-menu">
-              {/* Safaris Dropdown */}
+              {/* Safaris */}
               <li
                 className="dropdown-item"
                 onMouseEnter={() => setSafarisOpen(true)}
@@ -44,38 +51,90 @@ const Navbar = () => {
                 {safarisOpen && (
                   <ul className="sub-dropdown">
                     <li>
-                      <Link to="/olpejeta">Ol Pejeta Conservancy</Link>
+                      <Link
+                        to="/olpejeta"
+                        className={
+                          location.pathname === "/olpejeta" ? "active" : ""
+                        }
+                      >
+                        Ol Pejeta Conservancy
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/maasai-mara">
+                      <Link
+                        to="/maasai-mara"
+                        className={
+                          location.pathname === "/maasai-mara" ? "active" : ""
+                        }
+                      >
                         Maasai Mara National Reserve
                       </Link>
                     </li>
                     <li>
-                      <Link to="/amboseli">Amboseli National Park</Link>
+                      <Link
+                        to="/amboseli"
+                        className={
+                          location.pathname === "/amboseli" ? "active" : ""
+                        }
+                      >
+                        Amboseli National Park
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/tsavo">
+                      <Link
+                        to="/tsavo"
+                        className={
+                          location.pathname === "/tsavo" ? "active" : ""
+                        }
+                      >
                         Tsavo National Parks (East & West)
                       </Link>
                     </li>
                     <li>
-                      <Link to="/nakuru">Lake Nakuru National Park</Link>
+                      <Link
+                        to="/nakuru"
+                        className={
+                          location.pathname === "/nakuru" ? "active" : ""
+                        }
+                      >
+                        Lake Nakuru National Park
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/samburu">Samburu National Reserve</Link>
+                      <Link
+                        to="/samburu"
+                        className={
+                          location.pathname === "/samburu" ? "active" : ""
+                        }
+                      >
+                        Samburu National Reserve
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/nairobi">Nairobi National Park</Link>
+                      <Link
+                        to="/nairobi"
+                        className={
+                          location.pathname === "/nairobi" ? "active" : ""
+                        }
+                      >
+                        Nairobi National Park
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/meru">Meru National Park</Link>
+                      <Link
+                        to="/meru"
+                        className={
+                          location.pathname === "/meru" ? "active" : ""
+                        }
+                      >
+                        Meru National Park
+                      </Link>
                     </li>
                   </ul>
                 )}
               </li>
 
-              {/* Swahili Coast Dropdown */}
+              {/* Swahili Coast */}
               <li
                 className="dropdown-item"
                 onMouseEnter={() => setSwahiliOpen(true)}
@@ -85,16 +144,44 @@ const Navbar = () => {
                 {swahiliOpen && (
                   <ul className="sub-dropdown">
                     <li>
-                      <Link to="/lamu">Lamu</Link>
+                      <Link
+                        to="/lamu"
+                        className={
+                          location.pathname === "/lamu" ? "active" : ""
+                        }
+                      >
+                        Lamu
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/watamu">Watamu</Link>
+                      <Link
+                        to="/watamu"
+                        className={
+                          location.pathname === "/watamu" ? "active" : ""
+                        }
+                      >
+                        Watamu
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/kilifi">Kilifi</Link>
+                      <Link
+                        to="/kilifi"
+                        className={
+                          location.pathname === "/kilifi" ? "active" : ""
+                        }
+                      >
+                        Kilifi
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/diani">Diani</Link>
+                      <Link
+                        to="/diani"
+                        className={
+                          location.pathname === "/diani" ? "active" : ""
+                        }
+                      >
+                        Diani
+                      </Link>
                     </li>
                   </ul>
                 )}
@@ -104,16 +191,36 @@ const Navbar = () => {
         </li>
 
         <li>
-          <Link to="/how">HOW</Link>
+          <Link
+            to="/how"
+            className={location.pathname === "/how" ? "active" : ""}
+          >
+            HOW
+          </Link>
         </li>
         <li>
-          <Link to="/inquiries">INQUIRIES</Link>
+          <Link
+            to="/inquiries"
+            className={location.pathname === "/inquiries" ? "active" : ""}
+          >
+            INQUIRIES
+          </Link>
         </li>
         <li>
-          <Link to="/makeadifference">MAKE A DIFFERENCE</Link>
+          <Link
+            to="/makeadifference"
+            className={location.pathname === "/makeadifference" ? "active" : ""}
+          >
+            MAKE A DIFFERENCE
+          </Link>
         </li>
-                <li>
-          <Link to="/ourstory">OUR STORY</Link>
+        <li>
+          <Link
+            to="/ourstory"
+            className={location.pathname === "/ourstory" ? "active" : ""}
+          >
+            OUR STORY
+          </Link>
         </li>
       </ul>
 
@@ -125,45 +232,30 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <ul className="mobile-menu">
-          <li className="active">Discover</li>
+          <li>
+            <Link
+              to="/"
+              className={location.pathname === "/" ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              DISCOVER
+            </Link>
+          </li>
 
-          {/* Mobile Dropdown */}
+          {/* WHEN & WHERE */}
           <li onClick={() => setDropdownOpen(!dropdownOpen)}>
-            WHEN & WHERE {dropdownOpen ? "▲" : "▼"}
+            WHEN & WHERE ▾
             {dropdownOpen && (
               <ul className="mobile-dropdown">
                 {/* Safaris */}
                 <li onClick={() => setSafarisOpen(!safarisOpen)}>
-                  Safaris {safarisOpen ? "▲" : "▼"}
+                  Safaris ▸
                   {safarisOpen && (
                     <ul className="mobile-sub-dropdown">
                       <li>
-                        <Link to="/olpejeta">Ol Pejeta Conservancy</Link>
-                      </li>
-                      <li>
-                        <Link to="/maasai-mara">
-                          Maasai Mara National Reserve
+                        <Link to="/olpejeta" onClick={() => setMenuOpen(false)}>
+                          Ol Pejeta Conservancy
                         </Link>
-                      </li>
-                      <li>
-                        <Link to="/amboseli">Amboseli National Park</Link>
-                      </li>
-                      <li>
-                        <Link to="/tsavo">
-                          Tsavo National Parks (East & West)
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/nakuru">Lake Nakuru National Park</Link>
-                      </li>
-                      <li>
-                        <Link to="/samburu">Samburu National Reserve</Link>
-                      </li>
-                      <li>
-                        <Link to="/nairobi">Nairobi National Park</Link>
-                      </li>
-                      <li>
-                        <Link to="/meru">Meru National Park</Link>
                       </li>
                     </ul>
                   )}
@@ -171,20 +263,13 @@ const Navbar = () => {
 
                 {/* Swahili Coast */}
                 <li onClick={() => setSwahiliOpen(!swahiliOpen)}>
-                  Swahili Coast {swahiliOpen ? "▲" : "▼"}
+                  Swahili Coast ▸
                   {swahiliOpen && (
                     <ul className="mobile-sub-dropdown">
                       <li>
-                        <Link to="/lamu">Lamu</Link>
-                      </li>
-                      <li>
-                        <Link to="/watamu">Watamu</Link>
-                      </li>
-                      <li>
-                        <Link to="/kilifi">Kilifi</Link>
-                      </li>
-                      <li>
-                        <Link to="/diani">Diani</Link>
+                        <Link to="/lamu" onClick={() => setMenuOpen(false)}>
+                          Lamu
+                        </Link>
                       </li>
                     </ul>
                   )}
@@ -193,8 +278,26 @@ const Navbar = () => {
             )}
           </li>
 
-          <li>How</li>
-          <li>Inquiries</li>
+          <li>
+            <Link to="/how" onClick={() => setMenuOpen(false)}>
+              HOW
+            </Link>
+          </li>
+          <li>
+            <Link to="/inquiries" onClick={() => setMenuOpen(false)}>
+              INQUIRIES
+            </Link>
+          </li>
+          <li>
+            <Link to="/makeadifference" onClick={() => setMenuOpen(false)}>
+              MAKE A DIFFERENCE
+            </Link>
+          </li>
+          <li>
+            <Link to="/ourstory" onClick={() => setMenuOpen(false)}>
+              OUR STORY
+            </Link>
+          </li>
         </ul>
       )}
     </nav>

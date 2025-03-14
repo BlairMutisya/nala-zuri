@@ -11,8 +11,8 @@ const HowToExplore = () => {
     <div className="how-to-explore">
       {/* <Navbar /> */}
       {/* Hero Section */}
-      <div className="hero-section">
-        <div className="hero-overlay">
+      <div className="hero-section-how">
+        <div className="hero-overlay-how">
           <h1>How to Explore</h1>
           {/* <button className="explore-btn">Start Exploring</button> */}
         </div>

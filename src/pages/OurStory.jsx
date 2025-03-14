@@ -7,6 +7,7 @@ import TeresaImage from "../assets/profile-placeholder.jpg";
 import RoseImage from "../assets/profile-placeholder.jpg";
 import GloriaImage from "../assets/profile-placeholder.jpg";
 import Footer from "../components/Footer";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const OurStory = () => {
   return (

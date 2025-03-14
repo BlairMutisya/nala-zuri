@@ -11,13 +11,13 @@ font-family: "Playfair Display", serif;
 }
 
 /* Hero Section */
-.hero-section {
+.hero-section-how {
   position: relative;
   height: 100vh;
   background: url('../assets/HowToExplore.jpg') center/cover no-repeat;
 }
 
-.hero-overlay {
+.hero-overlay-how {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -30,7 +30,7 @@ font-family: "Playfair Display", serif;
   padding: 20px;
 }
 
-.hero-overlay h1 {
+.hero-overlay-how h1 {
  font-family: "Poly", serif;
   font-weight: 300;
   font-size: 120px;
