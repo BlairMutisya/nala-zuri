@@ -86,11 +86,11 @@ const OurStory = () => {
           <div className="team-card">
             <img
               src={TeresaImage}
-              alt="Teressa Palacious"
+              alt="Teresa Palacios"
               className="team-img"
             />
             <div className="team-info">
-              <h3>Teressa Palacious </h3>
+              <h3>Teresa Palacios </h3>
               <p className="role">CEO & Founder</p>
               <p>
                 Teressa brings her expertise in travel planning and operations

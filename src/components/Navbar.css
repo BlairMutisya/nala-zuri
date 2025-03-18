@@ -33,6 +33,7 @@
   list-style: none;
   font-size: 18px;
   transform: translateX(-20%);
+  font-family: "Helvetica", helvetica;
 }
 
 .nav-links li {
