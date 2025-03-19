@@ -31,8 +31,8 @@
   display: flex;
   gap: 40px;
   list-style: none;
-  font-size: 18px;
-  transform: translateX(-20%);
+  font-size: 17px;
+  transform: translateX(0%);
   font-family: "Helvetica", helvetica;
 }
 
@@ -140,7 +140,7 @@
 
 .mobile-menu .active,
 .mobile-menu li:hover {
-  color: yellow;
+  color: #D4AF37;;
 }
 
 /* Mobile Dropdown */
@@ -176,4 +176,12 @@
   .menu-btn {
     display: block;
   }
+}
+/* Reduce the size of the Google Translate dropdown */
+#google_translate_element select {
+  width: 140px !important; /* Adjust width as needed */
+  font-size: 14px !important; /* Adjust font size */
+  padding: 1px !important;
+  font-family: "Helvetica", helvetica;
+  margin-top: -2px;
 }

@@ -7,16 +7,19 @@ import LandingPage from "./pages/LandingPage";
 import HowToExplore from './pages/How';
 import MakeADifference from "./pages/MakeADifference";
 import OurStory from "./pages/OurStory";
+import WhatsAppChat from "./components/WhatsAppChat";
+
 
 function App() {
   return (
     <div className="app">
       <Navbar />
+      <WhatsAppChat />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/how" element={<HowToExplore />} />
         <Route path="/makeadifference" element={<MakeADifference />} />
-        <Route path= "/ourstory" element={< OurStory />} />
+        <Route path="/ourstory" element={<OurStory />} />
         {/* <Route path="/tickets" element={<TicketsPage />} /> */}
       </Routes>
       {/* <Footer /> */}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import "./Navbar.css";
+import GoogleTranslate from "./GoogleTranslate";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -221,6 +222,9 @@ const Navbar = () => {
           >
             OUR STORY
           </Link>
+        </li>
+        <li>
+          <GoogleTranslate />
         </li>
       </ul>
 

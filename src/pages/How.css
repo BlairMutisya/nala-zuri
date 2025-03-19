@@ -33,7 +33,7 @@ font-family: "Playfair Display", serif;
 .hero-overlay-how h1 {
  font-family: "Poly", serif;
   font-weight: 300;
-  font-size: 120px;
+  font-size: 140px;
 }
 
 
@@ -100,5 +100,18 @@ font-family: "Playfair Display", serif;
 
   .section-content {
     padding: 0 30px;
+  }
+}
+/* For small screens like mobile devices */
+@media (max-width: 768px) {
+  .hero-overlay-how h1 {
+    font-size: 20vw; /* Increases flexibility for small screens */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .hero-overlay-how h1 {
+    font-size: 19vw; /* Further adjusts for smaller devices */
   }
 }
