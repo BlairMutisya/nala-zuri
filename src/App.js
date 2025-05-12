@@ -2,7 +2,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import HowToExplore from './pages/How';
 import MakeADifference from "./pages/MakeADifference";
@@ -20,9 +19,7 @@ function App() {
         <Route path="/how" element={<HowToExplore />} />
         <Route path="/makeadifference" element={<MakeADifference />} />
         <Route path="/ourstory" element={<OurStory />} />
-        {/* <Route path="/tickets" element={<TicketsPage />} /> */}
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }

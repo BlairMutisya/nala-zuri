@@ -2,10 +2,10 @@ import React from "react";
 import "./OurStory.css";
 // import storyImage from "../assets/Story.jpg";
 // import safariImage from "../assets/safari-lodge.jpg";
-import MercyImage from "../assets/profile-placeholder.jpg";
-import TeresaImage from "../assets/profile-placeholder.jpg";
-import RoseImage from "../assets/profile-placeholder.jpg";
-import GloriaImage from "../assets/profile-placeholder.jpg";
+import MercyImage from "../assets/MERCY & TERESA CO FOUNDERS.jpeg";
+// import TeresaImage from "../assets/profile-placeholder.jpg";
+import RoseImage from "../assets/Rose.jpg";
+import GloriaImage from "../assets/Gloria.jpg";
 import Footer from "../components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -56,10 +56,7 @@ const OurStory = () => {
               src={require("../assets/Story.jpg")}
               alt="Cultural Experience"
             />
-            <img
-              src={require("../assets/safari-lodge.jpg")}
-              alt="Luxury Safari Lodge"
-            />
+            <img src={require("../assets/safari.jpg")} alt="Safari" />
           </div>
         </div>
       </section>
@@ -70,20 +67,20 @@ const OurStory = () => {
           <div className="team-card">
             <img src={MercyImage} alt="Mercy Wanjiku " className="team-img" />
             <div className="team-info">
-              <h3>Mercy Wanjiku</h3>
-              <p className="role">CEO & Founder</p>
+              <h3>Mercy Wanjiku & Teresa Palacios</h3>
+              <p className="role">CEOs & Founders</p>
               <p>
-                A visionary leader with a deep passion for travel, Mercy founded
+              Visionary leaders with a deep passion for travel. They founded
                 Nalazuri Travels to create meaningful travel experiences that
-                connect people with nature, culture, and local communities. She
-                is committed to sustainable tourism and ensuring that every
+                connect people with nature, culture, and local communities. They
+                are committed to sustainable tourism and ensuring that every
                 journey has a positive impact.
               </p>
             </div>
           </div>
 
           {/* Team Member 2 */}
-          <div className="team-card">
+          {/* <div className="team-card">
             <img
               src={TeresaImage}
               alt="Teresa Palacios"
@@ -98,8 +95,8 @@ const OurStory = () => {
                 delivering exceptional customer service and making sure every
                 traveler enjoys a seamless, well-organized experience.
               </p>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
 
           {/* Team Member 3 */}
           <div className="team-card">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
+import { Link, useLocation } from "react-router-dom"; 
 import "./Navbar.css";
 import GoogleTranslate from "./GoogleTranslate";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   const [safarisOpen, setSafarisOpen] = useState(false);
   const [swahiliOpen, setSwahiliOpen] = useState(false);
 
-  const location = useLocation(); // Get current route
+  const location = useLocation();
 
   return (
     <nav className="navbar">

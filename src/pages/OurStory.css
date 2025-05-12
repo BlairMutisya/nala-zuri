@@ -7,6 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed; /* Enables parallax */
+  z-index: 1;
 }
 
 .our-story .overlay {

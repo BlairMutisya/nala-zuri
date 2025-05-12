@@ -1,9 +1,14 @@
 import React from "react";
 import "./LandingPage.css";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-import Blog1 from "../assets/Blog1.jpg";
-import Blog2 from "../assets/Blog2.jpg";
-import Blog3 from "../assets/Blog3.jpg";
+// import Blog1 from "../assets/Blog1.JPG";
+// import Blog2 from "../assets/Blog2.jpg";
+// import Blog3 from "../assets/Blog3.jpg";
+import SafariAdventures from "../assets/Safari Adventures.jpg"
+import CoastalRetreats from "../assets/Coastal Retreats.jpg"
+import CulturalImmersion from "../assets/Cultural Immersion.jpg"
+import LuxuryStays from "../assets/Luxury Stays.jpg"
+
 import Footer from "../components/Footer";
 
 
@@ -16,7 +21,7 @@ const LandingPage = () => {
         <div className="content">
           <h2>EXPLORE THE BEAUTY OF</h2>
           <h1>KENYA</h1>
-          <h2>WITH NALA-ZURI TRAVELS</h2>
+          <h2>WITH NALAZURI TRAVELS</h2>
         </div>
         <div className="social-icons">
           <FaInstagram />
@@ -77,7 +82,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/*Blog-Section*/}
-      <section className="blog-section">
+      {/* <section className="blog-section">
         <h2 className="blog-title">BLOG</h2>
         <div className="blog-images">
             <div className="blog-images">
@@ -86,7 +91,60 @@ const LandingPage = () => {
               <img src={Blog3} alt="Blog 3" className="blog-img" />
             </div>
         </div>
-      </section>
+      </section> */}
+         <section className="featured-section">
+      <div className="featured-container">
+        <div className="featured-header">
+          <h2 className="featured-title">FEATURED EXPERIENCES</h2>
+          <p className="featured-subtitle">
+            Discover our carefully curated selection of extraordinary adventures
+          </p>
+          <div className="featured-underline"></div>
+        </div>
+
+        <div className="featured-grid">
+          {[
+            {
+              img: SafariAdventures,
+              title: "Safari Adventures",
+              desc: "Witness the majesty of African wildlife in their natural habitat",
+            },
+            {
+              img: CoastalRetreats,
+              title: "Coastal Retreats",
+              desc: "Unwind in luxury along Kenya's pristine coastline",
+            },
+            {
+              img: CulturalImmersion,
+              title: "Cultural Immersion",
+              desc: "Experience the rich traditions of Kenya's diverse cultures",
+            },
+            {
+              img: LuxuryStays,
+              title: "Luxury Stays",
+              desc: "Indulge in world-class accommodations in stunning locations",
+            },
+          ].map((item, index) => (
+            <div className="featured-card" key={index}>
+              <div className="featured-overlay"></div>
+              <img
+                src={item.img}
+                alt={item.title}
+                className="featured-image"
+              />
+              <div className="featured-content">
+                <h3 className="featured-card-title">{item.title}</h3>
+                <p className="featured-card-desc">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="featured-footer">
+          <button className="featured-main-button">VIEW ALL EXPERIENCES</button>
+        </div>
+      </div>
+    </section>
       <Footer />
     </div>
   );
