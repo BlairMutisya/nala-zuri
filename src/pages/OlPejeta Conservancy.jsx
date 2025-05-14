@@ -9,30 +9,43 @@ import Olpajeta6 from '../assets/Olpajeta 6.jpg';
 import OlpajetaGallery4 from '../assets/Olpajeta Gallery 4.jpg'; 
 import OlpajetaGallery6 from '../assets/Olpajeta Gallery 6.jpg'; 
 import OlpajetaGallery7 from '../assets/Olpajeta Gallery 7.jpg'; 
- 
 
 const OlPejeta = () => {
   return (
     <div className="ol-pejeta">
-      <div className="cover-photo-container">
-        <img src={CoverPhoto} alt="Ol Pejeta Conservancy" className="cover-image" />
-      </div>
-      <h1>Ol Pejeta Conservancy – A Sanctuary for Endangered Wildlife</h1>
-      <p>
-        Located in Laikipia County, Ol Pejeta is a model for conservation efforts in Africa. It is home to the last two remaining northern white rhinos, Africa’s largest black rhino sanctuary, and a thriving population of lions, elephants, and cheetahs. Visitors can experience game drives, guided bush walks, and even behind-the-scenes conservation tours. The conservancy also hosts the Sweetwaters Chimpanzee Sanctuary, the only place in Kenya where you can see rescued chimpanzees.
-      </p>
-      <h2>Ol Pejeta Gallery</h2>
-      <div className="image-gallery">
-        <img src={Olpajeta1} alt="Ol Pejeta 1" />
-        <img src={Olpajeta2} alt="Ol Pejeta 2" />
-        <img src={Olpajeta3} alt="Ol Pejeta 3" />
-        <img src={Olpajeta4} alt="Ol Pejeta 4" />
-        <img src={Olpajeta6} alt="Ol Pejeta 6" />
-        <img src={OlpajetaGallery4} alt="Ol Pejeta Gallery 4" />
-        <img src={OlpajetaGallery6} alt="Ol Pejeta Gallery 6" />
-        <img src={OlpajetaGallery7} alt="Ol Pejeta Gallery 7" />
-        
-      </div>
+      {/* Hero Section */}
+      <div 
+        className="hero-section" 
+        style={{ backgroundImage: `url(${CoverPhoto})` }} 
+        aria-label="Cover photo of Ol Pejeta Conservancy"
+      />
+
+      {/* Title Section */}
+      <header className="page-title-container" aria-label="Page title">
+        <h1 className="page-title">Ol Pejeta Conservancy – A Sanctuary for Endangered Wildlife</h1>
+      </header>
+
+      {/* Description Section */}
+      <section className="description" aria-label="Description of Ol Pejeta Conservancy">
+        <p>
+          Located in Laikipia County, Ol Pejeta is a model for conservation efforts in Africa. It is home to the last two remaining northern white rhinos, Africa’s largest black rhino sanctuary, and a thriving population of lions, elephants, and cheetahs. Visitors can experience game drives, guided bush walks, and even behind-the-scenes conservation tours. The conservancy also hosts the Sweetwaters Chimpanzee Sanctuary, the only place in Kenya where you can see rescued chimpanzees.
+        </p>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="gallery-section" aria-label="Ol Pejeta Conservancy photo gallery">
+        <h2 className="gallery-title">Ol Pejeta Gallery</h2>
+        <div className="image-gallery">
+          <img src={Olpajeta1} alt="Wildlife in Ol Pejeta Conservancy" />
+          <img src={Olpajeta2} alt="Scenic view of Ol Pejeta Conservancy" />
+          <img src={Olpajeta3} alt="Rhinos in Ol Pejeta Conservancy" />
+          <img src={Olpajeta4} alt="Game drive in Ol Pejeta Conservancy" />
+          <img src={Olpajeta6} alt="Elephants at Ol Pejeta Conservancy" />
+          <img src={OlpajetaGallery4} alt="Ol Pejeta Gallery 4" />
+          <img src={OlpajetaGallery6} alt="Cheetah sighting at Ol Pejeta" />
+          <img src={OlpajetaGallery7} alt="Sweetwaters Chimpanzee Sanctuary" />
+        </div>
+      </section>
     </div>
   );
 };

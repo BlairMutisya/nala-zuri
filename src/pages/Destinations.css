@@ -1,122 +1,62 @@
-/* General styles for all park components */
-.park {
-    padding: 30px;
-    max-width: 900px;
-    margin: auto;
-    font-family: 'Georgia', serif;
-    color: #2c3e50; 
-    background-color: #fdfdfd; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+/* Destinations.css */
+
+/* Hero section with background image */
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
-/* Position cover photo container below the navbar */
-.cover-photo-container {
-    margin-top: 70px; 
-    width: 100%;
-    max-width: 900px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Title container */
+.page-title-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-/* Cover photo */
-.cover-image {
-    width: 100%;
-    height: 400px;       
-    display: block;     
-    object-fit: cover;   
-    border-radius: 10px;
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Title styles */
-h1 {
-    color: #34495e;
-    margin-bottom: 15px;
-    font-size: 2.8em;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
+/* Description section */
+.description {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: center;
 }
 
-/* Paragraph styles */
-p {
-    line-height: 1.7;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    text-align: justify;
+/* Gallery section */
+.gallery-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #333;
 }
 
-/* Image gallery styles */
 .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem 3rem;
 }
 
 .image-gallery img {
-    width: 100%;
-    height: 200px;       
-    object-fit: cover;   
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
-
-/* Additional styles for parks */
-.amboseli, .maasai-mara, .nairobi, .meru, .ol-pejeta, .samburu, .lake-nakuru,
-.tsavo, .watamu, .lamu, .kilifi, .diani {
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.amboseli:hover, .maasai-mara:hover, .nairobi:hover, .meru:hover, .ol-pejeta:hover,
-.samburu:hover, .lake-nakuru:hover, .tsavo:hover, .watamu:hover, .lamu:hover,
-.kilifi:hover, .diani:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .cover-photo-container {
-        margin-top: 60px;
-        max-width: 100%;
-    }
-    .cover-image {
-        height: 280px;
-    }
-    .image-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 12px;
-    }
-    .image-gallery img {
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cover-photo-container {
-        margin-top: 55px;
-    }
-    .cover-image {
-        height: 200px;
-    }
-    .image-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 10px;
-    }
-    .image-gallery img {
-        height: 110px;
-    }
-}
-

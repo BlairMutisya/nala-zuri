@@ -16,13 +16,20 @@ import Tsavogallery6 from '../assets/Tsavo gallery 6.jpg';
 const Tsavo = () => {
   return (
     <div className="tsavo">
+      {/* Cover photo section */}
       <div className="cover-photo-container">
         <img src={TsavoCoverPhoto} alt="Tsavo National Park" className="cover-image" />
       </div>
+
+      {/* Page title */}
       <h1>Tsavo National Parks (East & West) – Kenya’s Largest Wilderness</h1>
+
+      {/* Description section */}
       <p>
         Spanning over 22,000 square kilometers, Tsavo East and Tsavo West National Parks form Kenya’s largest conservation area, famous for its rugged terrain, lava flows, and red-dust elephants. Tsavo East is known for its vast open spaces and large herds of elephants, while Tsavo West offers stunning scenery with volcanic hills, Mzima Springs (where you can see hippos and crocodiles underwater), and diverse birdlife. The parks are ideal for off-the-beaten-path safaris and thrilling wildlife encounters.
       </p>
+
+      {/* Gallery section */}
       <h2>Tsavo Gallery</h2>
       <div className="image-gallery">
         <img src={Tsavo1} alt="Tsavo 1" />
@@ -32,7 +39,7 @@ const Tsavo = () => {
         <img src={Tsavo6} alt="Tsavo 6" />
         <img src={TsavoGallery1} alt="Tsavo Gallery 1" />
         <img src={TsavoGallery2} alt="Tsavo Gallery 2" />
-         <img src={Tsavogallery3} alt="Tsavo Gallery 3" /> 
+        <img src={Tsavogallery3} alt="Tsavo Gallery 3" /> 
         <img src={TsavoGallery4} alt="Tsavo Gallery 4" />
         <img src={Tsavogallery5} alt="Tsavo Gallery 5" />
         <img src={Tsavogallery6} alt="Tsavo Gallery 6" />
