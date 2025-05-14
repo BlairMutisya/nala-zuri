@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css';
+import './Diani.css';
 import CoverPhoto from '../assets/Diani Cover Photo.jpg'; 
 import Diani1 from '../assets/Diani 1.jpg'; 
 import Diani2 from '../assets/Diani 2.jpg';
@@ -14,7 +14,7 @@ const Diani = () => {
     <div className="diani">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-diani" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Diani Beach"
       >

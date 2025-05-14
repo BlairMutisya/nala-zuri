@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css'; 
+import './Meru.css'; 
 import CoverPhoto from '../assets/Meru Cover Photo.jpg'; 
 import Meru1 from '../assets/Meru 1.jpg'; 
 import Meru2 from '../assets/Meru 2.jpg';
@@ -11,7 +11,7 @@ const Meru = () => {
     <div className="meru-national-park">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-meru" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Meru National Park"
       />

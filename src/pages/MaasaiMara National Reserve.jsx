@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css'; 
+import './MaasaiMara.css'; 
 import CoverPhoto from '../assets/Maasai Mara Cover photo.jpg'; 
 import MaasaiMara1 from '../assets/Maasai Mara 1.jpeg'; 
 import MaasaiMara2 from '../assets/Maasai Mara 2.jpg';
@@ -17,7 +17,7 @@ const MaasaiMara = () => {
     <div className="maasai-mara">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-maasai-mara" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Maasai Mara"
       />

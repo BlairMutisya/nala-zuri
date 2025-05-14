@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css'; 
+import './Nairobi.css'; 
 import CoverPhoto from '../assets/Nairobi Cover Photo.jpeg'; 
 import Nairobi1 from '../assets/Nairobi 1.jpg'; 
 import Nairobi2 from '../assets/Nairobi 2.jpeg';
@@ -16,7 +16,7 @@ const Nairobi = () => {
     <div className="nairobi">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-nairobi" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Nairobi National Park"
       />

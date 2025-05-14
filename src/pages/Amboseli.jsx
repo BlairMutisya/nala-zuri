@@ -1,6 +1,6 @@
 import React from 'react';
-import './Destinations.css'; // Use the same CSS file as Lamu if you're reusing styles
-import CoverPhoto from '../assets/Amboseli Cover Photo.jpeg'; 
+import './Amboseli.css'; // Import your CSS file for styling
+import AmboseliCoverPhoto from '../assets/Amboseli Cover Photo.jpeg'; 
 import Amboseli1 from '../assets/Amboseli 1.jpeg'; 
 import Amboseli2 from '../assets/Amboseli 2.jpg';
 import Amboseli3 from '../assets/Amboseli 3.jpg';
@@ -17,8 +17,8 @@ const Amboseli = () => {
     <div className="amboseli">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
-        style={{ backgroundImage: `url(${CoverPhoto})` }} 
+        className="hero-section-amboseli" 
+        style={{ backgroundImage: `url(${AmboseliCoverPhoto})` }} 
         aria-label="Cover photo of Amboseli National Park"
       >
         {/* Empty div for background image */}

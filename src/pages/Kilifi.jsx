@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css'; 
+import './Kilifi.css'; 
 import CoverPhoto from '../assets/Kilifi cover photo.jpg'; 
 import Kilifi1 from '../assets/Kilifi 1.jpg'; 
 import Kilifi2 from '../assets/Kilifi 2.jpg';
@@ -15,7 +15,7 @@ const Kilifi = () => {
     <div className="kilifi">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-kilifi" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Kilifi Beach"
       >

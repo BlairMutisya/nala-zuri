@@ -17,9 +17,9 @@ const Lamu = () => {
     <div className="lamu">
       {/* Cover Photo Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-lamu" 
         style={{ backgroundImage: `url(${LamuPhotoCover})` }} 
-        aria-label="Cover photo of Lamu landscape"
+        
       >
         {/* Empty div for background image display */}
       </div>

@@ -1,9 +1,9 @@
 /* Hero Section */
-.hero-section-watamu {
+.hero-section-diani {
     position: relative;
     width: 100%;
     height: 100vh; /* Increased height */
-    background-image: url('../assets/Watamu cover photo.jpg');
+    background-image: url('../assets/Diani Cover Photo.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

@@ -3,6 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
+import Inquiries from "./pages/Inquiries";
 import LandingPage from "./pages/LandingPage";
 import WhenAndWhere from "./pages/WhenAndWhere";
 import Amboseli from "./pages/Amboseli";
@@ -23,11 +24,12 @@ function App() {
     <div className="app">
       <Navbar />
       <Routes>
+        <Route path="/Inquiries" element={<Inquiries />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="/when-and-where" element={<WhenAndWhere />} />
         <Route path="/amboseli" element={<Amboseli />} />
         <Route path="/tsavo" element={<Tsavo />} />
-        <Route path="/lake-nakuru" element={<LakeNakuru />} />
+        <Route path="/nakuru" element={<LakeNakuru />} />
         <Route path="/samburu" element={<Samburu />} />
         <Route path="/nairobi" element={<Nairobi />} />
         <Route path="/meru" element={<Meru />} />

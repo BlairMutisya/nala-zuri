@@ -1,9 +1,9 @@
 /* Hero Section */
-.hero-section-watamu {
+.hero-section-lake-nakuru {
     position: relative;
     width: 100%;
     height: 100vh; /* Increased height */
-    background-image: url('../assets/Watamu cover photo.jpg');
+    background-image: url('../assets/Lake Nakuru cover photo.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

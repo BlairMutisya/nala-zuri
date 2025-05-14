@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css'; 
+import './OlPejeta.css'; 
 import CoverPhoto from '../assets/Olpejeta Cover Photo.jpg'; 
 import Olpajeta1 from '../assets/Ol pajeta 1.jpg'; 
 import Olpajeta2 from '../assets/Olpajeta 2.jpg';
@@ -15,7 +15,7 @@ const OlPejeta = () => {
     <div className="ol-pejeta">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-ol-pejeta" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Ol Pejeta Conservancy"
       />

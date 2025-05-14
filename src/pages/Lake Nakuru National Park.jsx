@@ -1,5 +1,5 @@
 import React from 'react';
-import './Destinations.css'; 
+import './LakeNakuru.css'; 
 import CoverPhoto from '../assets/Lake Nakuru cover photo.jpg'; 
 import LakeNakuru1 from '../assets/Lake Nakuru 1.jpg'; 
 import LakeNakuru2 from '../assets/Lake Nakuru 2.jpg';
@@ -19,7 +19,7 @@ const LakeNakuru = () => {
     <div className="lake-nakuru">
       {/* Hero Section */}
       <div 
-        className="hero-section" 
+        className="hero-section-lake-nakuru" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Lake Nakuru"
       >
