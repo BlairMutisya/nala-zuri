@@ -1,15 +1,15 @@
 import React from 'react';
 import './Destinations.css'; 
-import CoverPhoto from '../assets/Nairobi Cover Photo.jpg'; 
+import CoverPhoto from '../assets/Nairobi Cover Photo.jpeg'; 
 import Nairobi1 from '../assets/Nairobi 1.jpg'; 
-import Nairobi2 from '../assets/Nairobi 2.jpg';
+import Nairobi2 from '../assets/Nairobi 2.jpeg';
 import Nairobi3 from '../assets/Nairobi 3.jpg';
 import Nairobi4 from '../assets/Nairobi 4.jpg';
 import Nairobi5 from '../assets/Nairobi 5.jpg'; 
 import Nairobi6 from '../assets/Nairobi 6.jpg';
 import NairobiGallery2 from '../assets/Nairobi Gallery 2.jpg'; 
 import NairobiGallery3 from '../assets/Nairobi Gallery 3.jpg'; 
-import NairobiGallery4 from '../assets/Nairobi Gallery 4.jpg'; 
+import NairobiGallery4 from '../assets/Nairobi Gallery 4.jpeg'; 
  
 
 const Nairobi = () => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Destinations.css'; 
 import MaasaiMaraCoverphoto from '../assets/Maasai Mara Cover photo.jpg'; 
-import MaasaiMara1 from '../assets/Maasai Mara 1.jpg'; 
+import MaasaiMara1 from '../assets/Maasai Mara 1.jpeg'; 
 import MaasaiMara2 from '../assets/Maasai Mara 2.jpg';
 import MaasaiMara3 from '../assets/Maasai Mara 3.jpg';
 import MaasaiMara4 from '../assets/Maasai Mara 4.jpg';
 import MaasaiMara5 from '../assets/Maasai mara 5.jpg'; 
-import MaasaiMaraGallery1 from '../assets/Maasai Mara Gallery 1.jpg'; 
+//import MaasaiMaraGallery1 from '../assets/Maasai Mara Gallery 1.jpg'; 
 import MaasaiMaraGallery2 from '../assets/Maasai Mara Gallery 2.jpg'; 
 import MaasaiMaraGallery3 from '../assets/Maasai Mara Gallery 3.jpeg'; 
 import MaasaiMaraGallery4 from '../assets/Maasai Mara Gallery 4.jpeg'; 
@@ -30,7 +30,7 @@ const MaasaiMara = () => {
         <img src={MaasaiMara3} alt="Maasai Mara 3" />
         <img src={MaasaiMara4} alt="Maasai Mara 4" />
         <img src={MaasaiMara5} alt="Maasai Mara 5" />
-        <img src={MaasaiMaraGallery1} alt="Maasai Mara Gallery 1" />
+        
         <img src={MaasaiMaraGallery2} alt="Maasai Mara Gallery 2" />
         <img src={MaasaiMaraGallery3} alt="Maasai Mara Gallery 3" />
         <img src={MaasaiMaraGallery4} alt="Maasai Mara Gallery 4" />

@@ -10,80 +10,113 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
 }
 
-/* Add margin-top to cover images to position them below the navbar */
+/* Position cover photo container below the navbar */
 .cover-photo-container {
     margin-top: 70px; 
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Cover photo */
 .cover-image {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 25px; /* Space below the image */
-    border-radius: 10px; /* Rounded corners for the cover image */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 100%;
+    height: 400px;       
+    display: block;     
+    object-fit: cover;   
+    border-radius: 10px;
 }
 
+/* Title styles */
 h1 {
-    color: #34495e; /* Elegant dark blue */
+    color: #34495e;
     margin-bottom: 15px;
-    font-size: 2.8em; /* Larger font size for the title */
-    text-align: center; /* Center the title */
-    font-weight: bold; /* Bold title */
-    text-transform: uppercase; 
+    font-size: 2.8em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+/* Paragraph styles */
 p {
-    line-height: 1.7; 
-    font-size: 1.2em; 
-    margin-bottom: 20px; 
-    text-align: justify; 
+    line-height: 1.7;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-/* Specific styles for Amboseli */
-.amboseli {
-    background-color: #ffffff; 
-    border-radius: 12px; 
-    padding: 40px; 
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); 
-    transition: transform 0.3s, box-shadow 0.3s; 
-}
-
-.amboseli:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25); 
-}
-
+/* Image gallery styles */
 .image-gallery {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
-    margin-top: 25px; 
+    margin-top: 25px;
 }
 
 .image-gallery img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 10px; 
-    transition: transform 0.3s, box-shadow 0.3s; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    height: 200px;       
+    object-fit: cover;   
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional styles for specific parks */
-.amboseli, .maasai-mara, .nairobi, .meru, .ol-pejeta, .samburu, .lake-nakuru, .tsavo, .watamu, .lamu, .kilifi, .diani {
-    padding: 30px; 
-    border-radius: 10px; 
-    background-color: #ffffff; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s, box-shadow 0.3s; 
+/* Additional styles for parks */
+.amboseli, .maasai-mara, .nairobi, .meru, .ol-pejeta, .samburu, .lake-nakuru,
+.tsavo, .watamu, .lamu, .kilifi, .diani {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.amboseli:hover, .maasai-mara:hover, .nairobi:hover, .meru:hover, .ol-pejeta:hover, .samburu:hover, .lake-nakuru:hover, .tsavo:hover, .watamu:hover, .lamu:hover, .kilifi:hover, .diani:hover {
+.amboseli:hover, .maasai-mara:hover, .nairobi:hover, .meru:hover, .ol-pejeta:hover,
+.samburu:hover, .lake-nakuru:hover, .tsavo:hover, .watamu:hover, .lamu:hover,
+.kilifi:hover, .diani:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25); 
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cover-photo-container {
+        margin-top: 60px;
+        max-width: 100%;
+    }
+    .cover-image {
+        height: 280px;
+    }
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+    }
+    .image-gallery img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover-photo-container {
+        margin-top: 55px;
+    }
+    .cover-image {
+        height: 200px;
+    }
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    .image-gallery img {
+        height: 110px;
+    }
 }
 
