@@ -2,14 +2,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-<<<<<<< HEAD
-import LandingPage from "./pages/LandingPage";
-import HowToExplore from './pages/How';
-import MakeADifference from "./pages/MakeADifference";
-import OurStory from "./pages/OurStory";
-import WhatsAppChat from "./components/WhatsAppChat";
 
-=======
+
 // import Footer from "./components/Footer";
 import Inquiries from "./pages/Inquiries";
 import LandingPage from "./pages/LandingPage";
@@ -26,7 +20,7 @@ import Lamu from "./pages/Lamu"; // Import the Lamu component
 import Watamu from "./pages/Watamu"; // Import the Watamu component
 import Kilifi from "./pages/Kilifi"; // Import the Kilifi component
 import Diani from "./pages/Diani"; // Import the Diani component
->>>>>>> 60fd48bb36af69af4177c29611ffcd3536530f26
+
 
 function App() {
   return (
@@ -36,28 +30,8 @@ function App() {
       <Routes>
         <Route path="/Inquiries" element={<Inquiries />} />
         <Route path="/" element={<LandingPage />} />
-<<<<<<< HEAD
-        <Route path="/how" element={<HowToExplore />} />
-        <Route path="/makeadifference" element={<MakeADifference />} />
-        <Route path="/ourstory" element={<OurStory />} />
-=======
-        <Route path="/when-and-where" element={<WhenAndWhere />} />
-        <Route path="/amboseli" element={<Amboseli />} />
-        <Route path="/tsavo" element={<Tsavo />} />
-        <Route path="/nakuru" element={<LakeNakuru />} />
-        <Route path="/samburu" element={<Samburu />} />
-        <Route path="/nairobi" element={<Nairobi />} />
-        <Route path="/meru" element={<Meru />} />
-        <Route path="/olpejeta" element={<OlPejeta />} />
-        <Route path="/maasai-mara" element={<MaasaiMara />} />
-        <Route path="/lamu" element={<Lamu />} />
-        <Route path="/watamu" element={<Watamu />} />
-        <Route path="/kilifi" element={<Kilifi />} />
-        <Route path="/diani" element={<Diani />} /> 
-        {/* <Route path="/about" element={<AboutPage />} /> */}
-        {/* <Route path="/contact" element={<ContactPage />} /> */}
-        {/* <Route path="/tickets" element={<TicketsPage />} /> */}
->>>>>>> 60fd48bb36af69af4177c29611ffcd3536530f26
+
+    
       </Routes>
     </div>
   );
