@@ -14,6 +14,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import db from "../firebase.js";
+import { FaCheckCircle } from "react-icons/fa";
 
 const MakeADifference = () => {
   const [donationAmount, setDonationAmount] = useState(0);
@@ -135,33 +136,6 @@ const MakeADifference = () => {
       </div>
       {/* Current Projects Section */}
       <section className="make-difference-hero">
-        {/* <div className="make-difference-grid">
-          <div className="make-difference-content">
-            <h1 className="make-difference-title">
-              Sustainable Travel for a Better Tomorrow
-            </h1>
-            <p className="make-difference-text">
-              Join us in our mission to promote eco-friendly travel experiences
-              while supporting local communities and environmental conservation
-              projects.
-            </p>
-            <div className="make-difference-buttons">
-              <button className="make-difference-btn-primary">
-                Explore Our Projects
-              </button>
-              <button className="make-difference-btn-secondary">
-                Learn More
-              </button>
-            </div>
-          </div>
-          <div className="make-difference-image">
-            <img
-              src="https://readdy.ai/api/search-image?query=Beautiful%20landscape%20with%20lush%20green%20forests%20and%20mountains%2C%20eco-friendly%20travel%20concept%2C%20sustainable%20tourism%2C%20environmental%20conservation%2C%20natural%20scenery%20with%20clean%20water%20and%20clear%20blue%20sky%2C%20peaceful%20nature%20scene&width=700&height=500&seq=1&orientation=landscape"
-              alt="Sustainable Travel"
-            />
-          </div>
-        </div> */}
-
         <div className="make-difference-project">
           <h2 className="make-difference-subtitle">
             Our Current Project: 5 Waves at Mukuru Primary & Junior High School
@@ -169,22 +143,28 @@ const MakeADifference = () => {
           <div className="make-difference-columns">
             <div>
               <p className="make-difference-paragraph">
-                We are proud to support a five-year initiative at Mukuru Primary
-                and Junior High School, in partnership with{" "}
+                We are proud to support a <strong>five-year initiative</strong>{" "}
+                at
+                <strong>Mukuru Primary and Junior High School</strong>, in
+                partnership with{" "}
                 <a
                   href="https://planetpluskenya.co.ke/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Planet Plus Kenya
+                  <strong>Planet Plus Kenya-</strong>
                 </a>{" "}
                 —an environmental organization dedicated to conservation and
                 climate resilience.
               </p>
               <p className="make-difference-paragraph">
-                Through 5 Waves, we aim to instill environmental consciousness,
-                mental health awareness, and civic engagement among students and
-                the wider community.
+                This project, <strong>5 Waves</strong>, focuses on empowering{" "}
+                <strong>100 students</strong>
+                through <strong>Education for Sustainable Development</strong>,
+                equipping them with knowledge and skills to address
+                environmental and socio-economic challenges in their community
+                by{" "}
+                <strong>contributing at least USD 10,000 over 5 years</strong>.
               </p>
             </div>
             <div className="make-difference-image-box">
@@ -197,37 +177,33 @@ const MakeADifference = () => {
               Why Mukuru Primary & Junior High School?
             </h3>
             <p className="make-difference-paragraph">
-              Located in Mukuru Kayaba, one of Nairobi's largest informal
-              settlements, Mukuru Primary serves as a beacon of hope for many
-              children. Established 40 years ago by the Sisters of Mercy, the
-              school remains a vital access point for education in an area
-              facing severe socio-economic challenges.
+              Located in <strong>Mukuru Kayaba</strong>, one of Nairobi's
+              largest informal settlements, Mukuru Primary serves as a beacon of
+              hope for many children. Established <strong>40 years ago</strong>{" "}
+              by the <strong>Sisters of Mercy</strong>, the school remains a
+              vital access point for education in an area facing{" "}
+              <strong>severe socio-economic challenges</strong>, including:
             </p>
-          </div>
 
-          {/* <div className="make-difference-note">
-            <h3 className="make-difference-note-title">
-              Another Project: Forest Restoration in Limuru/Kimende
-            </h3>
-            <div className="make-difference-columns">
-              <div>
-                <p className="make-difference-paragraph">
-                  We are currently exploring a forest restoration project in
-                  Limuru/Kimende, just 150 km from Nairobi. A site visit is
-                  planned soon.
-                </p>
-              </div>
-              <div
-                className="make-difference-image-box"
-                style={{ height: "12rem" }}
-              >
-                <img
-                  src="https://readdy.ai/api/search-image?query=Beautiful%20forest%20landscape%20in%20Kenya%20with%20lush%20green%20trees%20and%20natural%20vegetation%2C%20morning%20sunlight%20filtering%20through%20leaves%2C%20peaceful%20nature%20conservation%20area&width=600&height=300&seq=3&orientation=landscape"
-                  alt="Limuru Forest"
-                />
-              </div>
-            </div> */}
-          {/* </div> */}
+            <ul className="make-difference-list">
+              <li>
+                <FaCheckCircle className="icon" /> Overcrowding & inadequate
+                sanitation
+              </li>
+              <li>
+                <FaCheckCircle className="icon" /> Limited access to clean water
+                & healthcare
+              </li>
+              <li>
+                <FaCheckCircle className="icon" /> High rates of unemployment &
+                informal labor
+              </li>
+              <li>
+                <FaCheckCircle className="icon" /> Lack of environmental
+                awareness & civic education
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section className="donation-section">

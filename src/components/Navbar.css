@@ -121,50 +121,85 @@
 }
 
 .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34, 32, 32);
+  padding: 1rem;
+  border-top: 1px solid #ddd;
   position: absolute;
-  top: 70px;
+  top: 100%;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  text-align: center;
-  padding: 20px 0;
-  list-style: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color:rgb(250, 248, 248)
 }
 
 .mobile-menu li {
-  padding: 10px;
-  font-size: 20px;
-  color: white;
-  cursor: pointer;
-}
-
-.mobile-menu .active,
-.mobile-menu li:hover {
-  color: #D4AF37;;
-}
-
-/* Mobile Dropdown */
-.mobile-dropdown {
-  display: none;
-  padding-left: 15px;
   list-style: none;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f9f9f9;
 }
 
-.mobile-menu .dropdown-open {
+.mobile-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #f9f9f9;
   display: block;
 }
 
-/* Mobile Sub-dropdown */
-.mobile-sub-dropdown {
-  display: none;
-  padding-left: 20px;
-  list-style: none;
+.mobile-dropdown {
+  background-color: #f9f9f9;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  animation: dropdownFade 0.3s ease-in-out;
 }
 
-/* Show dropdowns when active */
+.mobile-dropdown li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #444;
+}
+
+.mobile-sub-dropdown {
+  background-color: #f0f0f0;
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  animation: dropdownFade 0.3s ease-in-out;
+}
+
 .mobile-sub-dropdown li {
-  padding: 8px 15px;
-  font-size: 18px;
+  padding: 0.5rem 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.mobile-sub-dropdown a {
+  color: #555;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 /* Responsive Design */
@@ -184,4 +219,24 @@
   padding: 1px !important;
   font-family: "Helvetica", helvetica;
   margin-top: -2px;
+}
+.goog-te-combo {
+  width: 100% !important;
+  max-width: 200px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  #google_translate_element select {
+    width: 100% !important;
+    font-size: 16px !important;
+  }
+
+  #google_translate_element {
+    display: block !important;
+    position: relative !important;
+    z-index: 1000;
+    margin: 10px auto;
+    text-align: center;
+  }
 }

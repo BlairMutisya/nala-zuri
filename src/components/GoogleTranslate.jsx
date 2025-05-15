@@ -2,24 +2,35 @@ import { useEffect } from "react";
 
 const GoogleTranslate = () => {
   useEffect(() => {
-    // Prevent multiple script loads
     if (!window.googleTranslateElementInit) {
       window.googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
+        if (window.google && window.google.translate) {
+          new window.google.translate.TranslateElement(
+            { pageLanguage: "en" },
+            "google_translate_element"
+          );
+        }
       };
 
-      const addScript = document.createElement("script");
-      addScript.src =
+      const script = document.createElement("script");
+      script.src =
         "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      addScript.async = true;
-      document.body.appendChild(addScript);
+      script.async = true;
+      document.body.appendChild(script);
     }
   }, []);
 
-  return <div id="google_translate_element"></div>;
+  return (
+    <div
+      id="google_translate_element"
+      style={{
+        display: "block",
+        textAlign: "center",
+        margin: "10px auto",
+        zIndex: 9999,
+      }}
+    ></div>
+  );
 };
 
 export default GoogleTranslate;

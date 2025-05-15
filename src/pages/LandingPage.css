@@ -21,7 +21,22 @@ body, html {
   background: url(/public/bg-nalazuri.jpg) no-repeat center center/cover;
   background-attachment: fixed; /* Enables parallax */
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
 
+/* Fallback for mobile devices that don’t support fixed backgrounds well */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: fixed;
+    background-position: center top;
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+    width:auto;
+  }
 }
 
 /* Overlay Effect */
@@ -144,6 +159,23 @@ font-family: "Playfair Display", serif;
   align-items: center;
   border-radius: 0px; 
     background-attachment: fixed;
+}
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .full-width-image {
+    height: 70vh;
+    background-attachment: scroll; /* Avoid janky scroll on mobile/tablets */
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .full-width-image {
+    width: 100%;
+    height: 60vh;
+    padding: 0 1rem;
+    background-attachment: scroll; /* Fixed background causes issues on mobile */
+  }
 }
 
 /* Nalazuri Travels Section */
