@@ -17,8 +17,26 @@ body, html {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Image takes full viewport height */
+  height: 100vh;
   background: url(/public/bg-nalazuri.jpg) no-repeat center center/cover;
+  background-attachment: fixed; /* Enables parallax */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+/* Fallback for mobile devices that don’t support fixed backgrounds well */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: fixed;
+    background-position: center top;
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+    width:auto;
+  }
 }
 
 /* Overlay Effect */
@@ -26,14 +44,16 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
 }
 
 /* Content Inside the Hero Section */
 .content {
   position: absolute;
+  z-index: 3; /* Above the overlay */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -58,16 +78,17 @@ body, html {
 .social-icons {
   position: absolute;
   left: 30px;
-  bottom: 110px;
+  bottom: 240px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   font-size: 24px;
   color: white;
+  z-index: 3;
 }
 
 .social-icons svg:hover {
-  color: yellow;
+  color: #D4AF37;
   cursor: pointer;
 }
 
@@ -129,14 +150,32 @@ font-family: "Playfair Display", serif;
   }
 }
 .full-width-image {
-  width: 60%;  
-  height: 70vh;
-  background: url('../../src/assets/Image1.jpg') no-repeat center center/cover;
+  width: 90%;  
+  height: 90vh;
+  background: url('../../src/assets/image1.jpg') no-repeat center center/cover;
   margin: 0 auto;  
   display: flex;    
   justify-content: center;
   align-items: center;
   border-radius: 0px; 
+    background-attachment: fixed;
+}
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .full-width-image {
+    height: 70vh;
+    background-attachment: scroll; /* Avoid janky scroll on mobile/tablets */
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .full-width-image {
+    width: 100%;
+    height: 60vh;
+    padding: 0 1rem;
+    background-attachment: scroll; /* Fixed background causes issues on mobile */
+  }
 }
 
 /* Nalazuri Travels Section */
@@ -210,85 +249,180 @@ margin-bottom: auto; */
     font-size: 16px;
   }
 }
-.blog-section {
-  margin-top: 100px; /* Creates separation from previous section */
+.featured-section {
+  padding: 5rem 1.5rem;
+  background-color: #fff;
 }
 
-.blog-section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto; /* Adds spacing */
-  text-align: left;
-  margin-left: 30px;
+.featured-container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.blog-images {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+.featured-header {
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
-.blog-img {
-  width: 100%;
-  height: 450px;
-  margin-top: 40px;
-}
-.blog-title {
-  font-size: 2.5rem; 
+.featured-title {
+  font-size: 2.5rem;
   font-weight: bold;
-  text-align: center; 
-  padding-left: 20px; 
-  color: #222; 
-  margin-bottom: 20px; 
-  text-transform: uppercase; 
-  letter-spacing: 2px; 
+  color: #2d3748;
 }
-.main-img {
+
+.featured-subtitle {
+  font-size: 1.125rem;
+  color: #718096;
+  margin-top: 1rem;
+}
+
+.featured-underline {
+  width: 6rem;
+  height: 4px;
+  background-color: #facc15;
+  margin: 1.5rem auto 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.featured-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  transform: scale(1);
+  transition: transform 0.7s ease;
+}
+
+.featured-card:hover .featured-image {
   transform: scale(1.1);
-
 }
 
-/* Responsiveness */
-@media (max-width: 1024px) {
-  .blog-images {
-    gap: 10px; /* Reduce gap between images */
-  }
-
-  .blog-img {
-    height: 50px; /* Reduce image height */
-  }
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 
-@media (max-width: 768px) {
-  .blog-title {
-    font-size: 2rem; /* Reduce title size */
-  }
-
-  .blog-images {
-    gap: 20px; /* Reduce spacing further */
-  }
-
-  .blog-img {
-    height: 300px; /* Further reduce height but keep same layout */
-  }
+.featured-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: #fff;
+  z-index: 20;
 }
 
-@media (max-width: 480px) {
-  .blog-title {
-    font-size: 1.8rem; /* Adjust title size for mobile */
-  }
-
-  .blog-images {
-    gap: 10px;
-  }
-
-  .blog-img {
-    height: 50px; /* Smallest size for mobile */
-  }
+.featured-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
+
+.featured-card-desc {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.featured-button {
+  background-color: #facc15;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+.featured-card:hover .featured-button {
+  opacity: 1;
+}
+
+.featured-footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.featured-main-button {
+  padding: 0.75rem 2rem;
+  background-color: #facc15;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.featured-main-button:hover {
+  background-color: #eab308;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .content h1 {
-    font-size: 50px;
+    font-size: 90px;
+    font-weight: 500;
+  }
+  .content h2 {
+    font-size: 30px;
+    font-weight: 200;
+  }
+}
+/* Switch to flex-row for smaller screens */
+@media (max-width: 768px) { 
+  .social-icons {
+    position: absolute; /* Stick to bottom */
+    left: 50%;
+    bottom: 20px; /* Set to 20px as requested */
+    transform: translateX(-50%); /* Center align */
+    display: flex;
+    flex-direction: row; /* Change layout to horizontal */
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) { 
+  .social-icons {
+    font-size: 30px;
+    gap: 20px;
   }
 }

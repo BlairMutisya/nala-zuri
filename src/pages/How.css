@@ -1,104 +1,323 @@
 /* HowToExplore.css */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap");
 
-.how-to-explore {
-  flex: 2;
-  font-size: 19px;
-  color: #333;
-  line-height: 1.6;
-font-family: "Playfair Display", serif;
+.how-wrapper {
+  background: white;
+  font-family: "Playfair Display", serif;
 }
 
 /* Hero Section */
 .hero-section-how {
   position: relative;
+  width: 100%;
   height: 100vh;
-  background: url('../assets/HowToExplore.jpg') center/cover no-repeat;
+  background-attachment: fixed; /* Enables parallax */
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Fallback for mobile devices that don’t support fixed backgrounds well */
+@media (max-width: 768px) {
+  .hero-section-how {
+    background-attachment: fixed;
+    background-position: center top;
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+  }
 }
 
 .hero-overlay-how {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
+  /* text-align: center; */
   padding: 20px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+
 }
 
 .hero-overlay-how h1 {
- font-family: "Poly", serif;
+  font-family: "Poly", serif;
   font-weight: 300;
-  font-size: 120px;
+  font-size: 140px;
 }
 
-
-.explore-description {
+/* How It Works Section */
+.how-it-works {
   text-align: center;
-  font-size: 1.4rem;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
   color: #333;
-  max-width: 800px;
-  margin: 50px auto;
-  line-height: 1.6;
-  font-family: "Playfair Display", serif;
 }
 
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
 
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-/* Section Styling */
-.section {
+.step-box {
+  background-color: #f9fafb;
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.step-box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #c4c4c4;
+  color: #d4af37;
+  border-radius: 50%;
+  font-size: 28px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.step-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.step-box p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Call to Action */
+.call-to-action {
+  /* margin-top: 100px; */
+  /* background-color: #fef3c7; */
+  /* border-radius: 24px; */
+  padding: 40px 20px;
   text-align: center;
 }
 
-.section-image {
-  width: 70%;
-  height: auto; /* Ensures the image scales properly */
-  max-height: 500px; /* Adjust as needed */
-  max-width: 500px;
-  border-radius: 0px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.section-content {
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-.section-content h2 {
-  font-size: 2rem;
+.call-to-action h2 {
+  font-size: 32px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 20px;
 }
 
-.section-content p {
-  margin-top: 10px;
-  font-size: 1.3rem;
+.call-to-action p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 18px;
+  color: #666;
   line-height: 1.6;
 }
 
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .section {
-    flex-direction: row;
-    text-align: left;
-    justify-content: center;
-  }
+.cta-primary {
+  background-color: #d4af37;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .section:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
+.cta-primary:hover {
+  background-color: #edb80a;
+}
 
-  .section-content {
-    padding: 0 30px;
+.cta-secondary {
+  background-color: white;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-secondary:hover {
+  background-color: #fff7ed;
+}
+
+/* For small screens like mobile devices */
+@media (max-width: 768px) {
+  .hero-overlay-how h1 {
+    font-size: 20vw; /* Increases flexibility for small screens */
   }
 }
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .hero-overlay-how h1 {
+    font-size: 19vw; /* Further adjusts for smaller devices */
+  }
+}
+.how-image {
+  width: 50%; /* Full width of the container */
+  max-width: 500px; /* Or any desired fixed size */
+  height: 50%; /* Maintain aspect ratio */
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(30, 28, 28, 0.1);
+}
+.section-container {
+  max-width: 1200px; /* Sets the maximum width of the container */
+  margin: 0 auto; /* Centers the container horizontally with equal side margins */
+  padding: 4rem 2.5rem; /* Adds padding on top and bottom, and on the left and right */
+}
+
+.itineraries-section {
+  margin-bottom: 5rem;
+  padding: 2rem 4.5rem;
+}
+.solo-adventures-section {
+  margin-bottom: 5rem;
+  padding: 2rem 4.5rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .flex-row.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.half-width {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .half-width {
+    width: 50%;
+  }
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 1.5rem;
+}
+
+.section-paragraph {
+  color: #4b5563; /* gray-600 */
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.bullet-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f9fafb; /* gray-50 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.bullet-item i {
+  color: #d4af37; /* amber-600 */
+  font-size: 1.25rem;
+}
+
+.bullet-item span {
+  color: #374151; /* gray-700 */
+}
+
+.primary-button {
+  background-color: #d4af37; /* amber-600 */
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.primary-button:hover {
+  background-color: #edb80a; /* amber-700 */
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 4 / 5; /* Maintains 400x500 proportion */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Tablet-specific tweaks */
+@media (max-width: 1024px) {
+  .image-box img {
+    max-width: 350px;
+  }
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  .image-box img {
+    max-width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+  }
+}
+

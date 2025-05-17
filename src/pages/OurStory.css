@@ -7,6 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed; /* Enables parallax */
+  z-index: 1;
 }
 
 .our-story .overlay {
@@ -107,7 +109,7 @@
   }
 
   .our-story .overlay h1 {
-    font-size: 32px;
+    font-size: 19vw;
   }
 
   .our-story .overlay p {
@@ -295,4 +297,17 @@
     grid-template-columns: 1fr;
   }
 }
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .story-images img {
+    max-width: 200px; /* Slightly smaller images */
+  }
+}
 
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .story-images img {
+    max-width: 170px; /* Reduce size for smaller screens */
+    border-radius: 8px; /* Adjust border radius */
+  }
+}

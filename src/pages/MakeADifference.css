@@ -3,17 +3,32 @@
 .make-a-difference {
   width: 100%;
   color: #333;
-  font-family: Arial, sans-serif;
+  font-family:  "Playfair Display", serif;
   text-align: center;
-  padding-bottom: 50px;
 }
 
 .hero-section-difference {
   position: relative;
   height: 100vh;
-  background: url('../assets/Tree-Planting.jpg') center/cover no-repeat;
+  background: url('../assets/Tree-planting.jpg') center/cover no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed; /* Enables parallax */
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
 }
-
+/* Fallback for mobile devices that don’t support fixed backgrounds well */
+@media (max-width: 768px) {
+  .hero-section-difference {
+    background-attachment: fixed;
+    background-position: center top;
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+  }
+}
 .hero-overlay-difference {
   position: absolute;
   inset: 0;
@@ -113,13 +128,32 @@
 
 .image-content {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .image-content img {
-  width: 60%;
+  width: 100%;
+  max-width: 400px; /* Optional: restrict max size */
+  height: 500px;
   border-radius: 10px;
-  height: 60%;
+  object-fit: cover;
 }
+
+/* Optional enhancements for very small screens */
+@media (max-width: 768px) {
+  .image-content {
+    padding: 1rem 0;
+  }
+
+  .image-content img {
+    width: 110%;
+    height: 490px ;
+  }
+}
+
 .donation-section {
   text-align: center;
   padding: 50px 20px;
@@ -272,5 +306,292 @@
 
   .goal-card, .commitment-card {
     width: 100%;
+  }
+}
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .hero-overlay-difference h1 {
+    font-size: 10vw;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .hero-overlay-difference h1 {
+    font-size: 19vw;
+  }
+}
+
+.make-difference-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .make-difference-content {
+    padding: 3rem;
+  }
+}
+
+.make-difference-title {
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .make-difference-title {
+    font-size: 3rem;
+  }
+}
+
+.make-difference-text {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.make-difference-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.make-difference-btn-primary,
+.make-difference-btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.make-difference-btn-primary {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+}
+
+.make-difference-btn-primary:hover {
+  background-color: #15803d;
+}
+
+.make-difference-btn-secondary {
+  background-color: white;
+  color: #15803d;
+  border: 1px solid #15803d;
+}
+
+.make-difference-btn-secondary:hover {
+  background-color: #f0fdf4;
+}
+
+.make-difference-image {
+  position: relative;
+  height: 15rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .make-difference-image {
+    height: auto;
+  }
+}
+
+.make-difference-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  object-position: top;
+
+}
+
+/* Project Section */
+.make-difference-project {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.make-difference-subtitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2937;
+  /* margin-bottom: 1.5rem; */
+}
+
+.make-difference-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .make-difference-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.make-difference-paragraph {
+ font-size: 18px;
+  color: #4b5563;
+}
+
+.make-difference-image-box {
+  position: relative;
+  height: 24rem;
+  overflow: hidden;
+
+}
+
+.make-difference-image-box img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 2rem;
+}
+
+.make-difference-highlight {
+  background-color: #ecfdf5;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  /* margin-bottom: 2rem; */
+}
+
+.make-difference-highlight-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #065f46;
+  /* margin-bottom: 1rem; */
+}
+
+.donation-section {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.donation-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937; /* text-gray-900 */
+  /* margin-bottom: 1.5rem; */
+}
+
+.donation-description {
+  /* margin-bottom: 2rem; */
+}
+
+.donation-description p {
+  color: #374151; /* text-gray-700 */
+  font-size: 1.125rem;
+  /* margin-bottom: 1.5rem; */
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .donation-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.donation-card {
+  background-color: #ecfdf5; /* green-50 */
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1fae5; /* green-100 */
+}
+
+.donation-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #065f46; /* green-800 */
+  margin-bottom: 0.75rem;
+}
+
+.donation-card p {
+  color: #374151; /* text-gray-700 */
+}
+
+.donation-link {
+  color: #047857; /* green-700 */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.donation-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.make-difference-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 1rem;
+  color: #444;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.make-difference-list li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.make-difference-list .icon {
+  color: #2ecc71;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 600px) {
+  .make-difference-paragraph,
+  .make-difference-list {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .make-difference-list .icon {
+    font-size: 1rem;
   }
 }

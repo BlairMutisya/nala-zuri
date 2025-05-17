@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
+import { Link, useLocation } from "react-router-dom"; 
 import "./Navbar.css";
+import GoogleTranslate from "./GoogleTranslate";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   const [safarisOpen, setSafarisOpen] = useState(false);
   const [swahiliOpen, setSwahiliOpen] = useState(false);
 
-  const location = useLocation(); // Get current route
+  const location = useLocation();
 
   return (
     <nav className="navbar">
@@ -222,6 +223,9 @@ const Navbar = () => {
             OUR STORY
           </Link>
         </li>
+        <li>
+          <GoogleTranslate />
+        </li>
       </ul>
 
       {/* Mobile Menu Button */}
@@ -242,14 +246,32 @@ const Navbar = () => {
             </Link>
           </li>
 
-          {/* WHEN & WHERE */}
-          <li onClick={() => setDropdownOpen(!dropdownOpen)}>
-            WHEN & WHERE ▾
+          {/* WHEN & WHERE Dropdown */}
+          <li>
+            <div
+              onClick={() => {
+                setDropdownOpen(!dropdownOpen);
+                if (!dropdownOpen) {
+                  setSafarisOpen(false);
+                  setSwahiliOpen(false);
+                }
+              }}
+            >
+              WHEN & WHERE ▾
+            </div>
+
             {dropdownOpen && (
               <ul className="mobile-dropdown">
                 {/* Safaris */}
-                <li onClick={() => setSafarisOpen(!safarisOpen)}>
-                  Safaris ▸
+                <li>
+                  <div
+                    onClick={() => {
+                      setSafarisOpen(!safarisOpen);
+                      setSwahiliOpen(false);
+                    }}
+                  >
+                    Safaris ▸
+                  </div>
                   {safarisOpen && (
                     <ul className="mobile-sub-dropdown">
                       <li>
@@ -257,18 +279,78 @@ const Navbar = () => {
                           Ol Pejeta Conservancy
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          to="/maasai-mara"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          Maasai Mara National Reserve
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/amboseli" onClick={() => setMenuOpen(false)}>
+                          Amboseli National Park
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/tsavo" onClick={() => setMenuOpen(false)}>
+                          Tsavo National Parks
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/nakuru" onClick={() => setMenuOpen(false)}>
+                          Lake Nakuru National Park
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/samburu" onClick={() => setMenuOpen(false)}>
+                          Samburu National Reserve
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/nairobi" onClick={() => setMenuOpen(false)}>
+                          Nairobi National Park
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/meru" onClick={() => setMenuOpen(false)}>
+                          Meru National Park
+                        </Link>
+                      </li>
                     </ul>
                   )}
                 </li>
 
                 {/* Swahili Coast */}
-                <li onClick={() => setSwahiliOpen(!swahiliOpen)}>
-                  Swahili Coast ▸
+                <li>
+                  <div
+                    onClick={() => {
+                      setSwahiliOpen(!swahiliOpen);
+                      setSafarisOpen(false);
+                    }}
+                  >
+                    Swahili Coast ▸
+                  </div>
                   {swahiliOpen && (
                     <ul className="mobile-sub-dropdown">
                       <li>
                         <Link to="/lamu" onClick={() => setMenuOpen(false)}>
                           Lamu
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/watamu" onClick={() => setMenuOpen(false)}>
+                          Watamu
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/kilifi" onClick={() => setMenuOpen(false)}>
+                          Kilifi
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/diani" onClick={() => setMenuOpen(false)}>
+                          Diani
                         </Link>
                       </li>
                     </ul>
@@ -297,6 +379,9 @@ const Navbar = () => {
             <Link to="/ourstory" onClick={() => setMenuOpen(false)}>
               OUR STORY
             </Link>
+          </li>
+          <li>
+            <GoogleTranslate />
           </li>
         </ul>
       )}
