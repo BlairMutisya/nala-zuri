@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from "../components/Footer";
 import './Meru.css'; 
 import CoverPhoto from '../assets/Meru Cover Photo.jpg'; 
 import Meru1 from '../assets/Meru 1.jpg'; 
@@ -44,6 +45,7 @@ const Meru = () => {
           <img src={MeruElephants} alt="Elephants in Meru National Park" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

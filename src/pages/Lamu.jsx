@@ -1,5 +1,6 @@
 import React from 'react';
-import './Lamu.css'; // Import your CSS file for styling
+import Footer from "../components/Footer";
+import './Lamu.css'; 
 import LamuPhotoCover from '../assets/Lamu Photo Cover .jpg'; 
 import Lamu1 from '../assets/Lamu 1.jpg'; 
 import Lamu2 from '../assets/Lamu 2.jpg';
@@ -52,6 +53,7 @@ const Lamu = () => {
           <img src={LamuOldtown9} alt="Historic buildings in Lamu Old Town" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

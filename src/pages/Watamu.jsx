@@ -1,6 +1,6 @@
 import React from 'react';
+import Footer from "../components/Footer";
 import './Watamu.css';
-
 import CoverPhoto from '../assets/Watamu cover photo.jpg';
 import Watamu1 from '../assets/Watamu 1.jpg';
 import Watamu2 from '../assets/Watamu 2.jpg';
@@ -49,6 +49,7 @@ const Watamu = () => {
           <img src={WatamuGallery1} alt="Watamu scenic view" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

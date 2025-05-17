@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from "../components/Footer";
 import './Samburu National Reserve.css'; 
 import CoverPhoto from '../assets/CoverPhoto.jpeg';
 import Samburu1 from '../assets/Samburu 1.jpg'; 
@@ -57,6 +58,7 @@ const Samburu = () => {
           <img src={SamburuGallery5} alt="Samburu Gallery 5" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

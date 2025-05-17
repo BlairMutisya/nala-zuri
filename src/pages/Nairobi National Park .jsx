@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from "../components/Footer";
+
 import './Nairobi.css'; 
 import CoverPhoto from '../assets/Nairobi Cover Photo.jpeg'; 
 import Nairobi1 from '../assets/Nairobi 1.jpg'; 
@@ -51,6 +53,7 @@ const Nairobi = () => {
           <img src={NairobiGallery4} alt="Savannah landscape in Nairobi National Park" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

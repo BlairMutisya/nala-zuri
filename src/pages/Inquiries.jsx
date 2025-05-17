@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Inquiries.css';
+import Footer from "../components/Footer";
+
 import CoverPhoto from '../assets/Inquiry Cover Photo.jpeg';
 
 const Inquiry = () => {
@@ -94,6 +96,7 @@ const Inquiry = () => {
           the African skies.
         </p>
       </div>
+      <Footer />
     </div>
   );
 };
