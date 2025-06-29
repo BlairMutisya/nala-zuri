@@ -133,7 +133,7 @@ const OurStory = () => {
           {/* Heading Section */}
           <div className="text-center">
             <h2 className="title">Why Choose Nala Zuri Travels?</h2>
-            <p className="description">
+            <p className="description2">
               We go beyond ordinary travel—we create unforgettable experiences
               that blend adventure, conservation, and community impact. Whether
               you're exploring Kenya's hidden gems or embarking on a classic

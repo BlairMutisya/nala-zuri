@@ -50,10 +50,10 @@ const HowToExplore = () => {
                   <span>Personalized service</span>
                 </div>
               </div>
-              <button className="primary-button">
+              {/* <button className="primary-button">
                 <span>Generate Estimated Invoice</span>
                 <i className="fas fa-arrow-right"></i>
-              </button>
+              </button> */}
             </div>
             <div className="half-width image-box">
               <img
@@ -94,10 +94,13 @@ const HowToExplore = () => {
                   <span>Curated Routes</span>
                 </div>
               </div>
-              <button className="primary-button">
-                <span>View Solo Travel Calendar</span>
-                <i className="fas fa-arrow-right"></i>
-              </button>
+              <a href="/calendar" target="_blank" rel="noopener noreferrer">
+                <button className="primary-button">
+                  <span>View Travel Calendar</span>
+                  <i className="fas fa-calendar-alt ml-2"></i>
+                </button>
+              </a>
+
             </div>
             <div className="half-width image-box">
               <img

@@ -1,13 +1,12 @@
 import React from "react";
 import "./LandingPage.css";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-// import Blog1 from "../assets/Blog1.JPG";
-// import Blog2 from "../assets/Blog2.jpg";
-// import Blog3 from "../assets/Blog3.jpg";
 import SafariAdventures from "../assets/Safari Adventures.jpg"
 import CoastalRetreats from "../assets/Coastal Retreats.jpg"
 import CulturalImmersion from "../assets/Cultural Immersion.jpg"
 import LuxuryStays from "../assets/Luxury Stays.jpg"
+import MaasaiMara1 from '../assets/Maasai Mara 1.jpeg';
+import Tsavo4 from '../assets/Tsavo 4.jpg';
 
 import Footer from "../components/Footer";
 
@@ -24,9 +23,15 @@ const LandingPage = () => {
           <h2>WITH NALAZURI TRAVELS</h2>
         </div>
         <div className="social-icons">
-          <FaInstagram />
-          <FaFacebook />
-          <FaWhatsapp />
+          <a href="https://www.instagram.com/nalazuritravels/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://wa.me/+254797106436" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp />
+          </a>
         </div>
       </div>
 
@@ -81,21 +86,10 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
-      {/*Blog-Section*/}
-      {/* <section className="blog-section">
-        <h2 className="blog-title">BLOG</h2>
-        <div className="blog-images">
-            <div className="blog-images">
-              <img src={Blog1} alt="Blog 1" className="blog-img" />
-              <img src={Blog2} alt="Blog 2" className="blog-img main-img" />
-              <img src={Blog3} alt="Blog 3" className="blog-img" />
-            </div>
-        </div>
-      </section> */}
          <section className="featured-section">
       <div className="featured-container">
         <div className="featured-header">
-          <h2 className="featured-title">FEATURED EXPERIENCES</h2>
+          <h2 className="featured-title">GALLERY</h2>
           <p className="featured-subtitle">
             Discover our carefully curated selection of extraordinary adventures
           </p>
@@ -109,6 +103,7 @@ const LandingPage = () => {
               title: "Safari Adventures",
               desc: "Witness the majesty of African wildlife in their natural habitat",
             },
+
             {
               img: CoastalRetreats,
               title: "Coastal Retreats",
@@ -124,6 +119,26 @@ const LandingPage = () => {
               title: "Luxury Stays",
               desc: "Indulge in world-class accommodations in stunning locations",
             },
+            {
+              img: LuxuryStays,
+              title: "Eco-Luxury Escapes",
+              desc: "Stay in environmentally conscious lodges blending comfort and sustainability",
+            },
+            {
+              img: Tsavo4,
+              title: "Big Five Expeditions",
+              desc: "Track lions, elephants, leopards, rhinos, and buffalos across iconic parks",
+            },
+            {
+              img: CoastalRetreats,
+              title: "Seaside Serenity",
+              desc: "Relax on sun-kissed beaches and explore vibrant marine life",
+            },
+            {
+              img: MaasaiMara1,
+              title: "Tribal Encounters",
+              desc: "Engage with local communities and discover Kenya’s heritage firsthand",
+            },
           ].map((item, index) => (
             <div className="featured-card" key={index}>
               <div className="featured-overlay"></div>
@@ -138,10 +153,6 @@ const LandingPage = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="featured-footer">
-          <button className="featured-main-button">VIEW ALL EXPERIENCES</button>
         </div>
       </div>
     </section>

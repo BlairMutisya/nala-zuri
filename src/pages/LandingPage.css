@@ -66,6 +66,7 @@ body, html {
   letter-spacing: 2px;
   font-family: "Lora", serif;
   font-weight: 300;
+  color: white;
 }
 
 .content h1 {
@@ -83,9 +84,18 @@ body, html {
   flex-direction: column;
   gap: 50px;
   font-size: 24px;
-  color: white;
   z-index: 3;
 }
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
 
 .social-icons svg:hover {
   color: #D4AF37;

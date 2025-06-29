@@ -67,14 +67,13 @@ const Footer = () => {
             <h3 className="footer-title">Contact Us</h3>
             <ul className="footer-contact">
               <li>
-                <i className="fas fa-map-marker-alt"></i> 123 Eco Street,
-                Nairobi, Kenya
+                <i className="fas fa-map-marker-alt"></i>Lantana road, Westlands
               </li>
               <li>
                 <i className="fas fa-envelope"></i> info@nalazuritravels.com
               </li>
               <li>
-                <i className="fas fa-phone"></i> +254 123 456 789
+                <i className="fas fa-phone"></i> +254 797 106436
               </li>
             </ul>
           </div>

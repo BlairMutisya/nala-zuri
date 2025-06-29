@@ -21,6 +21,7 @@ import Lamu from "./pages/Lamu"; // Import the Lamu component
 import Watamu from "./pages/Watamu"; // Import the Watamu component
 import Kilifi from "./pages/Kilifi"; // Import the Kilifi component
 import Diani from "./pages/Diani"; // Import the Diani component
+import Calendar from "./pages/Calendar";
 
 function App() {
   return (
@@ -46,9 +47,7 @@ function App() {
         <Route path="/watamu" element={<Watamu />} />
         <Route path="/kilifi" element={<Kilifi />} />
         <Route path="/diani" element={<Diani />} /> 
-        {/* <Route path="/about" element={<AboutPage />} /> */}
-        {/* <Route path="/contact" element={<ContactPage />} /> */}
-        {/* <Route path="/tickets" element={<TicketsPage />} /> */}
+        <Route path="/calendar" element={<Calendar />} />
       </Routes>
     </div>
   );
