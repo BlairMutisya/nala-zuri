@@ -128,7 +128,7 @@ const MakeADifference = () => {
             Green, Plant a Tree—an initiative dedicated to combating climate
             change, restoring Kenya’s forests, and preserving biodiversity.
           </p>
-          <button className="learn-more-btn">Learn About Our Impact</button>
+          {/* <button className="learn-more-btn">Learn About Our Impact</button> */}
         </div>
         <div className="image-content">
           <img src={plantingImage} alt="Tree Planting Initiative" />;

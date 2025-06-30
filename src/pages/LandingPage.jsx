@@ -34,7 +34,7 @@ const LandingPage = () => {
       <section className="journey-section">
         <div className="journey-text">
           <h2>
-            A JOURNEY OF ELEGANCE FROM UNTAMED WILDERNESS TO COASTAL SERENITY
+            A JOURNEY OF  UNTAMED WILDERNESS TO COASTAL SERENITY
           </h2>
           <div className="underline"></div>
         </div>
@@ -95,7 +95,7 @@ const LandingPage = () => {
          <section className="featured-section">
       <div className="featured-container">
         <div className="featured-header">
-          <h2 className="featured-title">FEATURED EXPERIENCES</h2>
+          <h2 className="featured-title">Gallery</h2>
           <p className="featured-subtitle">
             Discover our carefully curated selection of extraordinary adventures
           </p>
@@ -141,7 +141,7 @@ const LandingPage = () => {
         </div>
 
         <div className="featured-footer">
-          <button className="featured-main-button">VIEW ALL EXPERIENCES</button>
+          {/* <button className="featured-main-button">VIEW ALL EXPERIENCES</button> */}
         </div>
       </div>
     </section>

@@ -1,7 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
-/* Cover Photo Section  */
+/* Global Styles*/
+body {
+  margin: 0;
+  font-family: 'Poly', serif;
+  background-color: #faf8f5;
+  color: #2c2c2c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ------------------------------ 
+   Hero Section
+------------------------------ */
 .hero-section-inquiry {
   position: relative;
   width: 100%;
@@ -17,7 +32,6 @@
   z-index: 1;
 }
 
-/* Transparent dark overlay for readability */
 .hero-overlay-inquiry {
   position: absolute;
   inset: 0;
@@ -33,76 +47,116 @@
 }
 
 .hero-overlay-inquiry h1 {
-  font-family: 'Poly', serif;
-  font-weight: 300;
-  font-size: 5rem;
-  letter-spacing: 4px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 4.5rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
   margin: 0;
-  line-height: 1.1;
 }
 
 .hero-overlay-inquiry p {
-  font-family: 'Lora', serif;
-  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
   font-style: italic;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   max-width: 700px;
 }
 
-/* Inquiry Form Container */
-.inquiry-form {
-  max-width: 900px;
-  margin: 3rem auto 6rem auto;
-  padding: 0 1rem;
-  font-family: 'Lora', serif;
-  color: #333;
-  line-height: 1.6;
+/* ------------------------------ 
+   Page Layout
+------------------------------ */
+.inquiry-page {
+  font-family: 'Playfair Display', serif;
+  color: #2c2c2c;
+  background-color: #faf8f5;
 }
 
-/* Intro & Outro Text */
+/* ------------------------------ 
+   Intro & Outro Text
+------------------------------ */
 .inquiry-intro,
 .inquiry-outro {
-  max-width: 700px;
-  margin: 2.5rem auto;
+  max-width: 750px;
+  margin: 3rem auto;
+  padding: 0 1rem;
   font-size: 1.2rem;
-  color: #444;
+  line-height: 1.8;
   text-align: center;
+  color: #3b3b3b;
 }
 
-/* Form Title */
+/*Headings */
 h2 {
-  font-family: 'Lora', serif;
-  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
   font-size: 2.2rem;
-  color: #3b3b3b;
+  color: #2c2c2c;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0 1.5rem;
 }
 
 h2 span {
-  color: #a16c2f;
+  color: #a0754d;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5a4632;
+  margin: 2rem 0 1rem;
+}
+
+/* Inquiry Form */
+.inquiry-form {
+  max-width: 950px;
+  margin: 0 auto 5rem auto;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Form Rows */
 .form-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+/* Labels */
+.inquiry-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Inputs */
 input,
 select,
 textarea {
-  flex: 1;
-  min-width: 150px;
-  padding: 0.8rem 1rem;
+  width: 100%;
+  padding: 0.95rem 1rem;
   font-size: 1rem;
   border-radius: 10px;
   border: 1px solid #ccc;
-  font-family: 'Lora', serif;
+  font-family: 'Playfair Display', serif;
+  color: #2c2c2c;
+  background-color: #fff;
   box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #a0754d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(160, 117, 77, 0.15);
 }
 
 textarea {
@@ -110,22 +164,22 @@ textarea {
   resize: vertical;
 }
 
-/* Dream List Section */
+/*Dream List Section
+ */
 .dream-list-section {
-  max-width: 800px;
-  margin: 2rem auto 3rem auto;
-  padding: 1.5rem 1rem;
-  background-color: #f9f4ee;
-  border-radius: 12px;
+  background-color: #f8f4ef;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  margin: 3rem auto;
+  max-width: 850px;
   text-align: center;
-  color: #5a4632;
-  font-family: 'Lora', serif;
+  color: #443427;
 }
 
 .dream-list-section h2 {
-  font-size: 1.8rem;
-  color: #7a5533;
-  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  color: #a0754d;
+  margin-bottom: 0.75rem;
 }
 
 .dream-list-section p {
@@ -133,37 +187,120 @@ textarea {
   margin-bottom: 1rem;
 }
 
-/* Submit Button */
+/*  Destinations / Experiences
+ */
+.destinations-section {
+  margin: 4rem auto;
+  max-width: 900px;
+  padding: 2rem;
+  background: #fffaf3;
+  border-radius: 14px;
+  border-left: 5px solid #a0754d;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  font-family: 'Poly', serif;
+}
+
+.destinations-section h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #5e432d;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.destination-item {
+  position: relative;
+  background: #fff;
+  border: 1px solid #dfcbb2;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #3e2b20;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-family: 'Poly', serif;
+}
+
+.destination-item input[type="checkbox"] {
+  margin-right: 1rem;
+  transform: scale(1.4);
+  accent-color: #a0754d;
+}
+
+.destination-item:hover {
+  background: #f9f3e7;
+  border-color: #a0754d;
+  box-shadow: 0 4px 12px rgba(160, 117, 77, 0.1);
+}
+
+.destination-item input[type="checkbox"]:checked + label {
+  font-weight: 600;
+  color: #a0754d;
+}
+
+/*  Submit Button */
 button[type="submit"] {
-  background-color: #a16c2f;
+  background-color: #a0754d;
   color: white;
   border: none;
   padding: 1rem 3rem;
-  border-radius: 12px;
-  font-family: 'Poly', serif;
+  border-radius: 14px;
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.2rem;
   cursor: pointer;
   display: block;
-  margin: 2rem auto 0 auto;
+  margin: 3rem auto 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #8c5a24;
+  background-color: #8d6241;
 }
 
-/* Responsive */
+/* ------------------------------ 
+   Responsive Layout
+------------------------------ */
 @media (max-width: 768px) {
-  .hero-overlay-inquiry h1 {
-    font-size: 2.8rem;
+  .checkbox-section {
+    padding: 2.5rem 1.5rem;
   }
-  .hero-overlay-inquiry p {
-    font-size: 1.1rem;
+
+  .checkbox-section h2 {
+    font-size: 2.2rem;
   }
-  .form-row {
+
+  .checkbox-section p {
+    font-size: 1.2rem;
+  }
+
+  .checkbox-grid {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkbox-grid label {
+    width: 100%;
+    padding: 1.2rem 2rem;
+  }
+
+  .checkbox-grid {
+    gap: 1.5rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
   }
 }

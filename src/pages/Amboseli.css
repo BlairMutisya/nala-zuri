@@ -22,7 +22,7 @@
 }
 
 .page-title {
-    font-family: 'Georgia', serif; /* Changed font */
+    font-family: 'Playfair Display', serif; /* Changed font */
     font-weight: bold;
     font-size: 3.5rem;
     color: #0d4d4d;
@@ -49,7 +49,7 @@
 }
 
 .gallery-title {
-    font-family: 'Georgia', serif; /* Changed font */
+    font-family: 'Playfair Display', serif; /* Changed font */
     font-size: 2.2rem;
     color: #1a3d3b;
     text-align: center;
