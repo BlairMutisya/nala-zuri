@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from "../components/Footer";
+
 import './Diani.css';
 import CoverPhoto from '../assets/Diani Cover Photo.jpg'; 
 import Diani1 from '../assets/Diani 1.jpg'; 
@@ -46,6 +48,7 @@ const Diani = () => {
           <img src={Diani7} alt="Secluded beach in Diani" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

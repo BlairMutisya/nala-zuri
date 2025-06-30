@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import "./NalazuriSafaris.css";
+// import "../../public/Nalazuri logo.png"
 import "../pages/Calendar.css"
 import Footer from "../components/Footer";
 import TsavoGallery3 from '../assets/Tsavo gallery 3.jpg';
@@ -86,6 +88,26 @@ const Calendar = () => {
 
   return (
     <div className="safari-container">
+      {/* Hero Section
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="branding">
+            <img src="/Nalazuri logo.png" alt="Logo" className="logo" />
+            <div>
+              <h1 className="title">Nalazuri Safaris</h1>
+              <p className="subtitle">Official Safari Calendar 2025</p>
+            </div>
+          </div>
+          <div className="doc-info">
+            <p>Document #: NS-2025-001</p>
+            <p>Issue Date: June 26, 2025</p>
+          </div>
+          <p className="intro">Join Nalazuri for exciting group safaris across Kenya's top parks.</p>
+          <p className="description">
+            Each 3-day, 2-night adventure is in a comfortable 4x4 Land Cruiser. Perfect for wildlife and scenery.
+          </p>
+        </div>
+      </section> */}
 
       {/* Filters */}
       <div className="tab-buttons">

@@ -68,7 +68,7 @@ const OurStory = () => {
             <img src={MercyImage} alt="Mercy Wanjiku " className="team-img" />
             <div className="team-info">
               <h3>Mercy Wanjiku & Teresa Palacios</h3>
-              <p className="role">CEOs & Founders</p>
+              <p className="role">CO-Founders</p>
               <p>
               Visionary leaders with a deep passion for travel. They founded
                 Nalazuri Travels to create meaningful travel experiences that
@@ -170,10 +170,11 @@ const OurStory = () => {
             <div className="feature-card">
               <div className="icon-bg blue-bg"></div>
               <i className="fas fa-users feature-icon blue-icon"></i>
-              <h3>Expert Local Guides</h3>
+              <h3>Our Drivers & Guides</h3>
               <p>
-                Passionate professionals who bring every destination to life
-                with their knowledge.
+               At Nalazuri, your safari is led by professional driver-guides who combine expert driving with deep knowledge of
+               Kenya’s wildlife and terrain. Polite, punctual, and passionate, they ensure your safety and comfort
+              while offering rich insights and spotting wildlife others often miss.
               </p>
             </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from "../components/Footer";
 import './Kilifi.css'; 
 import CoverPhoto from '../assets/Kilifi cover photo.jpg'; 
 import Kilifi1 from '../assets/Kilifi 1.jpg'; 
@@ -48,6 +49,7 @@ const Kilifi = () => {
           <img src={Kilifi8} alt="Peaceful beach scene in Kilifi" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

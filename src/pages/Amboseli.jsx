@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from "../components/Footer";
+
 import './Amboseli.css'; // Import your CSS file for styling
 import AmboseliCoverPhoto from '../assets/Amboseli Cover Photo.jpeg'; 
 import Amboseli1 from '../assets/Amboseli 1.jpeg'; 
@@ -52,6 +54,7 @@ const Amboseli = () => {
           <img src={AmboseliGallery6} alt="Amboseli Gallery 6" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

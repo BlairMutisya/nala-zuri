@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from "../components/Footer";
 import './MaasaiMara.css'; 
 import CoverPhoto from '../assets/Maasai Mara Cover photo.jpg'; 
 import MaasaiMara1 from '../assets/Maasai Mara 1.jpeg'; 
@@ -50,6 +51,7 @@ const MaasaiMara = () => {
           <img src={MaasaiMaraGallery6} alt="River crossing during migration" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

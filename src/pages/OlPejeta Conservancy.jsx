@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from "../components/Footer";
+
 import './OlPejeta.css'; 
 import CoverPhoto from '../assets/Olpejeta Cover Photo.jpg'; 
 import Olpajeta1 from '../assets/Ol pajeta 1.jpg'; 
@@ -46,6 +48,7 @@ const OlPejeta = () => {
           <img src={OlpajetaGallery7} alt="Sweetwaters Chimpanzee Sanctuary" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

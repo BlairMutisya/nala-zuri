@@ -43,7 +43,7 @@ const HowToExplore = () => {
                 </div>
                 <div className="bullet-item">
                   <i className="fas fa-receipt"></i>
-                  <span>Estimated invoices</span>
+                  <span>Inquiries</span>
                 </div>
                 <div className="bullet-item">
                   <i className="fas fa-user-check"></i>

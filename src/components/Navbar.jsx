@@ -39,7 +39,7 @@ const Navbar = () => {
           onMouseEnter={() => setDropdownOpen(true)}
           onMouseLeave={() => setDropdownOpen(false)}
         >
-          WHEN & WHERE ▾
+           WHERE ▾
           {dropdownOpen && (
             <ul className="dropdown-menu">
               {/* Safaris */}

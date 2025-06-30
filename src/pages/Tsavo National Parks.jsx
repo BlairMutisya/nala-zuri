@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from "../components/Footer";
 import './Tsavo.css'; 
 import TsavoCoverPhoto from '../assets/Tsavo Cover Photo.jpeg';
 import Tsavo1 from '../assets/Tsavo 1.jpg'; 
@@ -56,6 +57,7 @@ const Tsavo = () => {
           <img src={TsavoGallery6} alt="Panoramic view of Tsavo" />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
