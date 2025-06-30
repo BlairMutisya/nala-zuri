@@ -149,33 +149,63 @@ const handleSubmit = async (e) => {
         </select>
 
         <h3>🗺️ Destination & Experience</h3>
-        <label>Destinations in Kenya</label>
-        {["Maasai Mara", "Tsavo East", "Tsavo West", "Lake Nakuru National Park", "Nairobi National Park", "Amboseli National Park", "Samburu National Reserve", "Meru National Park", "Kilifi", "Diani Beach", "Lamu", "Not sure yet"].map(dest => (
-          <div key={dest}>
-            <input type="checkbox" name="destinations" value={dest} onChange={handleChange} />
-            <label>{dest}</label>
-          </div>
-        ))}
 
-        <label>Experiences</label>
-        {["Big Five Game Safari", "Luxury Lodge Safari", "Cultural & Community Tours", "Beach + Safari Combo", "Sustainable/Eco-friendly Safari", "Romantic Getaway or Honeymoon", "Family Safari", "Solo Adventure"].map(exp => (
-          <div key={exp}>
-            <input type="checkbox" name="experiences" value={exp} onChange={handleChange} />
-            <label>{exp}</label>
-          </div>
-        ))}
-        <input type="text" name="customExperience" placeholder="Custom experience (optional)" onChange={handleChange} />
+        <div className="destination-list">
+          {[
+            "Maasai Mara", "Tsavo East", "Tsavo West", "Lake Nakuru National Park",
+            "Nairobi National Park", "Amboseli National Park", "Samburu National Reserve",
+            "Meru National Park", "Kilifi", "Diani Beach", "Lamu", "Not sure yet"
+          ].map(dest => (
+              <div key={dest} className="destination-row">
+                <span className="destination-label">{dest}</span>
+                <div className="destination-checkbox">
+                  <input
+                      type="checkbox"
+                      name="destinations"
+                      value={dest}
+                      onChange={handleChange}
+                  />
+                </div>
+              </div>
+          ))}
+        </div>
 
-        <h3>🛏️ Accommodation Preferences</h3>
-        <select name="accommodation" onChange={handleChange}>
-          <option value="">Select</option>
-          <option value="Budget Lodges">Budget Lodges</option>
-          <option value="Mid-range Lodges/Hotels">Mid-range Lodges/Hotels</option>
-          <option value="Luxury Lodges/Hotels">Luxury Lodges/Hotels</option>
-          <option value="Boutique Coastal Villas">Boutique Coastal Villas</option>
-          <option value="Mix">I’d like a mix</option>
-          <option value="Not sure">Not sure</option>
-        </select>
+        <div className="destination-list">
+          <h3>🎯 Experiences</h3>
+          {[
+            "Big Five Game Safari",
+            "Luxury Lodge Safari",
+            "Cultural & Community Tours",
+            "Beach + Safari Combo",
+            "Sustainable/Eco-friendly Safari",
+            "Romantic Getaway or Honeymoon",
+            "Family Safari",
+            "Solo Adventure"
+          ].map((exp) => (
+              <div key={exp} className="destination-row">
+                <span className="destination-label">{exp}</span>
+                <div className="destination-checkbox">
+                  <input
+                      type="checkbox"
+                      name="experiences"
+                      value={exp}
+                      onChange={handleChange}
+                  />
+                </div>
+              </div>
+          ))}
+
+          <input
+              type="text"
+              name="customExperience"
+              placeholder="Custom experience (optional)"
+              onChange={handleChange}
+              className="custom-experience-input"
+          />
+        </div>
+
+
+
 
         <h3>👨‍👩‍👧‍👦 Group Details</h3>
         <input type="number" name="travelers" placeholder="How many people are traveling?" onChange={handleChange} />
