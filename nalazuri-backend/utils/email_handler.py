@@ -1,12 +1,12 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
 
-#  Gmail credentials
-SENDER_EMAIL = "sandiemwangi99@gmail.com"
-SENDER_PASSWORD = "syzd wnmc rxtn jojf"  # Use app password for Gmail
+# Suggest using environment variables for security
+SENDER_EMAIL = os.getenv('SENDER_EMAIL')
+SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
 
-# Function to determine the recipient based on inquiry type
 def determine_recipient(inquiry_type):
     recipients = {
         "general": "info@nalazuritravels.com",
@@ -17,37 +17,35 @@ def determine_recipient(inquiry_type):
     }
     return recipients.get(inquiry_type.lower(), "info@nalazuritravels.com")
 
-# Function to send an inquiry email
 def send_inquiry_email(data):
     recipient_email = determine_recipient(data.get('inquiryType', 'general'))
 
-    # Create the email message
     msg = MIMEMultipart()
     msg['From'] = SENDER_EMAIL
     msg['To'] = recipient_email
-    msg['Subject'] = f"New Safari Inquiry: {data.get('fullName', '')}"
+    msg['Subject'] = f"New Safari Inquiry: {data.get('fullName', 'Unknown')}"
 
-    # Email body content
+    # Build the body of the email
     body = f"""
 🐘 New Safari Inquiry 🐘
 
-Full Name: {data.get('fullName')}
-Email: {data.get('email')}
-Phone: {data.get('phone')}
-Country: {data.get('country')}
-Preferred Contact Method: {data.get('contactMethod')}
-Dates: {data.get('fromDate')} to {data.get('toDate')}
-Flexible Dates: {data.get('flexibleDates')}
-Trip Duration: {data.get('tripDuration')}
+Full Name: {data.get('fullName', '')}
+Email: {data.get('email', '')}
+Phone: {data.get('phone', '')}
+Country: {data.get('country', '')}
+Preferred Contact Method: {data.get('contactMethod', '')}
+Dates: {data.get('fromDate', '')} to {data.get('toDate', '')}
+Flexible Dates: {data.get('flexibleDates', '')}
+Trip Duration: {data.get('tripDuration', '')}
 Destinations: {', '.join(data.get('destinations', []))}
 Experiences: {', '.join(data.get('experiences', []))}
-Custom Experience: {data.get('customExperience')}
-Accommodation: {data.get('accommodation')}
-Travelers: {data.get('travelers')}
-Children in Group: {data.get('hasChildren')}
-Children Ages: {data.get('childrenAges')}
-Values: {data.get('values')}
-Notes: {data.get('notes')}
+Custom Experience: {data.get('customExperience', '')}
+Accommodation: {data.get('accommodation', '')}
+Travelers: {data.get('travelers', '')}
+Children in Group: {data.get('hasChildren', '')}
+Children Ages: {data.get('childrenAges', '')}
+Values: {data.get('values', '')}
+Notes: {data.get('notes', '')}
 
 -------------------------
 Sent via Nalazuri Website Form
