@@ -32,7 +32,7 @@ const Amboseli = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Amboseli">
+      <section className="wordings" aria-label="Description about Amboseli">
         <p>
           Set against the majestic backdrop of Mount Kilimanjaro, Amboseli is famous for its large herds of elephants, some of the biggest in Africa. The park’s open plains, swamps, and woodlands provide a perfect setting for spotting diverse wildlife, including buffaloes, giraffes, zebras, and numerous bird species. Photographers and nature lovers are drawn to Amboseli for its dramatic landscapes and iconic elephant shots with Kilimanjaro in the background.
         </p>

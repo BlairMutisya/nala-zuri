@@ -29,7 +29,7 @@ const Watamu = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Watamu">
+      <section className="wordings" aria-label="Description about Watamu">
         <p>
           Nestled along a stunning stretch of coastline, Watamu is a haven for ocean lovers and nature enthusiasts. Its marine park, a UNESCO Biosphere Reserve, is home to vibrant coral reefs, sea turtles, and diverse marine life, making it a top destination for snorkeling and diving.
           Beyond the water, explore the ancient Gede Ruins hidden within a lush coastal forest or relax in eco-luxury resorts that embrace sustainable tourism. Watamu is where tranquility meets adventure, offering a perfect balance for the discerning traveler.

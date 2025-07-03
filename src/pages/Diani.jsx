@@ -29,7 +29,7 @@ const Diani = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Diani">
+      <section className="wordings" aria-label="Description about Diani">
         <p>
           Diani Beach is the crown jewel of Kenya’s coastline—renowned for its powdery white sands, crystal-clear waters, and lush palm-fringed shores. This award-winning destination offers a mix of barefoot luxury and thrilling adventure, from kite surfing and deep-sea fishing to exploring the sacred Kaya Kinondo Forest. Whether you prefer a private beachfront villa, a luxury resort, or a quiet boutique retreat, Diani caters to travelers seeking the ultimate coastal indulgence.
         </p>

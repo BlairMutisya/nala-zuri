@@ -31,7 +31,7 @@ const Lamu = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Lamu">
+      <section className="wordings" aria-label="Description about Lamu">
         <p>
           A UNESCO World Heritage Site, Lamu is Kenya’s oldest Swahili settlement, where history comes alive in its labyrinth of narrow alleyways, ancient coral stone houses, and beautifully carved wooden doors. The island moves at its own tranquil pace—there are no cars, only donkeys and dhows gliding across the Indian Ocean. Whether you're exploring the historic Lamu Old Town, sailing at sunset, or indulging in authentic Swahili cuisine, Lamu offers an experience steeped in culture and charm.
         </p>

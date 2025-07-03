@@ -33,7 +33,7 @@ const LakeNakuru = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Lake Nakuru">
+      <section className="wordings" aria-label="Description about Lake Nakuru">
         <p>
           Famous for its alkaline lake and spectacular flamingo populations, Lake Nakuru National Park is a must-visit for bird enthusiasts and nature lovers. The park is also a key rhino sanctuary, home to both black and white rhinos, as well as tree-climbing lions, leopards, and Rothschild’s giraffes. The picturesque landscape, with acacia woodlands and waterfalls, makes it one of the most scenic parks in Kenya.
         </p>

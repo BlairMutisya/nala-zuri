@@ -29,7 +29,7 @@ const MaasaiMara = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Maasai Mara">
+      <section className="wordings" aria-label="Wordings about Maasai Mara">
         <p>
           Arguably Kenya’s most famous wildlife destination, the Maasai Mara is known for its golden savannahs, abundant wildlife, and the spectacular Great Migration—where over two million wildebeest, zebras, and gazelles move in search of greener pastures, attracting predators like lions, cheetahs, and crocodiles. The reserve also offers hot air balloon safaris, cultural visits to Maasai villages, and some of the best big cat sightings in Africa.
         </p>

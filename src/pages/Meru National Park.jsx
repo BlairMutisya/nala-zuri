@@ -23,7 +23,7 @@ const Meru = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description of Meru National Park">
+      <section className="wordings" aria-label="Description of Meru National Park">
         <p>
           Nestled in the heart of eastern Kenya, Meru National Park is a hidden gem offering breathtaking landscapes, diverse wildlife, and a truly authentic safari experience. Spanning 870 square kilometers, this unspoiled wilderness is home to the Big Five, rare species like Grevy’s zebra and reticulated giraffe, and over 400 bird species.
         </p>

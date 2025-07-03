@@ -33,7 +33,7 @@ const Samburu = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description of Samburu National Reserve">
+      <section className="wordings" aria-label="Description of Samburu National Reserve">
         <p>
           Located along the Ewaso Nyiro River in Kenya’s arid north, Samburu National Reserve offers a unique safari experience with wildlife species not commonly found in other parks. The reserve is home to the "Samburu Special Five": the Grevy’s zebra, reticulated giraffe, Beisa oryx, Somali ostrich, and gerenuk (the long-necked antelope that stands on its hind legs to feed). It’s also a great place to spot leopards, African wild dogs, and elephants cooling off by the riverbanks.
         </p>

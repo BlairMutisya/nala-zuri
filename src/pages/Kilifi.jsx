@@ -29,7 +29,7 @@ const Kilifi = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Kilifi">
+      <section className="wordings" aria-label="Description about Kilifi">
         <p>
           Kilifi is a destination for those seeking a blend of coastal serenity and cultural vibrancy. The town is known for its breathtaking creek, lined with mangroves and dotted with traditional dhow boats, making it ideal for sailing, kayaking, and sunset cruises. Beyond its natural beauty, Kilifi is a creative and cultural hub, hosting events like the renowned Kilifi New Year Festival. With its laid-back charm and secluded beaches, Kilifi is a perfect escape for those looking to connect with both nature and the local artistic spirit.
         </p>

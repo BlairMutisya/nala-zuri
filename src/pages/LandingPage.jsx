@@ -39,7 +39,7 @@ const LandingPage = () => {
       <section className="journey-section">
         <div className="journey-text">
           <h2>
-            A JOURNEY OF ELEGANCE FROM UNTAMED WILDERNESS TO COASTAL SERENITY
+            A JOURNEY  FROM UNTAMED WILDERNESS TO COASTAL SERENITY
           </h2>
           <div className="underline"></div>
         </div>

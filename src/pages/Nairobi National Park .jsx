@@ -29,7 +29,7 @@ const Nairobi = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description of Nairobi National Park">
+      <section className="wordings" aria-label="Description of Nairobi National Park">
         <p>
           Just a stone’s throw from Kenya’s bustling capital, Nairobi National Park is a unique safari destination where skyscrapers form the backdrop to untamed wilderness. As the only national park in the world located within a capital city, it offers an extraordinary blend of urban convenience and raw African beauty.
         </p>

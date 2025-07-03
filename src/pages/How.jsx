@@ -157,10 +157,7 @@ const HowToExplore = () => {
           Whether you're seeking a curated experience or a solo adventure, we're
           here to make your Kenyan dream trip a reality.
         </p>
-        <div className="cta-buttons">
-          <button className="cta-primary">Plan My Trip</button>
-          <button className="cta-secondary">Contact Us</button>
-        </div>
+       
       </section>
       <Footer />
     </div>

@@ -34,7 +34,7 @@ const Tsavo = () => {
       </header>
 
       {/* Description Section */}
-      <section className="description" aria-label="Description about Tsavo">
+      <section className="wordings" aria-label="Description about Tsavo">
         <p>
           Spanning over 22,000 square kilometers, Tsavo East and Tsavo West National Parks form Kenya’s largest conservation area, famous for its rugged terrain, lava flows, and red-dust elephants. Tsavo East is known for its vast open spaces and large herds of elephants, while Tsavo West offers stunning scenery with volcanic hills, Mzima Springs (where you can see hippos and crocodiles underwater), and diverse birdlife. The parks are ideal for off-the-beaten-path safaris and thrilling wildlife encounters.
         </p>
