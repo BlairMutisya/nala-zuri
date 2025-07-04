@@ -66,7 +66,7 @@ const Inquiry = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/api/inquiry', {
+      const response = await fetch('https://nala-zuri.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -75,13 +75,13 @@ const Inquiry = () => {
       const result = await response.json();
 
       if (response.ok) {
-        alert("✅ Inquiry sent successfully!");
+        alert(" Inquiry sent successfully!");
       } else {
-        alert("❌ Failed to send: " + result.error);
+        alert(" Failed to send: " + result.error);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("❌ Could not connect to server.");
+      alert(" Could not connect to server.");
     }
   };
 
@@ -184,7 +184,7 @@ const Inquiry = () => {
           />
         </div>
 
-        <h3>👨‍👩‍👧‍👦 Group Details</h3>
+        <h3> Group Details</h3>
         <input type="number" name="travelers" placeholder="How many people are traveling?" onChange={handleChange} />
         <label>Are there children in your group?</label>
         <select name="hasChildren" onChange={handleChange}>
@@ -196,7 +196,7 @@ const Inquiry = () => {
           <input type="text" name="childrenAges" placeholder="Please specify ages" onChange={handleChange} />
         )}
 
-        <h3>🏨 Accommodation</h3>
+        <h3> Accommodation</h3>
         <label>Preferred Accommodation Type</label>
         <select name="accommodation" onChange={handleChange}>
           <option value="">Select Accommodation Type</option>
@@ -210,7 +210,7 @@ const Inquiry = () => {
           <option value="Not Sure Yet">Not Sure Yet</option>
         </select>
 
-        <h3>🌱 Travel Values (Rate 1–5)</h3>
+        <h3> Travel Values (Rate 1–5)</h3>
         {[
           { name: 'localSupport', label: 'Supporting local communities' },
           { name: 'ecoTravel', label: 'Sustainable and eco-friendly travel' },
@@ -225,7 +225,7 @@ const Inquiry = () => {
           </div>
         ))}
 
-        <h3>💬 Additional Notes</h3>
+        <h3> Additional Notes</h3>
         <textarea
           name="notes"
           placeholder="Any animals you’d love to see, activities, special occasions, dietary needs, or anything else?"
