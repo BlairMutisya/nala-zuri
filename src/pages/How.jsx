@@ -1,7 +1,7 @@
 
 import React from "react";
 import SoloAdventures from "../assets/soloAdventures.JPG";
-import Itineraries from "../assets/itineraries.jpg";
+import Itineraries from "../assets/Itineraries.jpg";
 import howToExplore from "../assets/HowToExplore.jpg";
 import Footer from "../components/Footer";
 import "./How.css";
