@@ -3,9 +3,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 
-# Suggest using environment variables for security
-SENDER_EMAIL = os.getenv('SENDER_EMAIL')
-SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
+# Replace with environment variables or secure secrets manager in production
+SENDER_EMAIL = "nalazuritravels2025@gmail.com"
+SENDER_PASSWORD = "npid doom ibqo uhwb"
 
 def determine_recipient(inquiry_type):
     recipients = {
@@ -18,14 +18,13 @@ def determine_recipient(inquiry_type):
     return recipients.get(inquiry_type.lower(), "info@nalazuritravels.com")
 
 def send_inquiry_email(data):
-    recipient_email = determine_recipient(data.get('inquiryType', 'general'))
+    recipient_email = determine_recipient(data.get("inquiryType", "general"))
 
     msg = MIMEMultipart()
     msg['From'] = SENDER_EMAIL
     msg['To'] = recipient_email
     msg['Subject'] = f"New Safari Inquiry: {data.get('fullName', 'Unknown')}"
 
-    # Build the body of the email
     body = f"""
 🐘 New Safari Inquiry 🐘
 
@@ -44,7 +43,13 @@ Accommodation: {data.get('accommodation', '')}
 Travelers: {data.get('travelers', '')}
 Children in Group: {data.get('hasChildren', '')}
 Children Ages: {data.get('childrenAges', '')}
-Values: {data.get('values', '')}
+
+Values:
+  - Supporting local communities: {data.get('values', {}).get('localSupport', 'N/A')}/5
+  - Sustainable and eco-friendly travel: {data.get('values', {}).get('ecoTravel', 'N/A')}/5
+  - Cultural immersion and learning: {data.get('values', {}).get('culture', 'N/A')}/5
+  - Comfort and relaxation: {data.get('values', {}).get('comfort', 'N/A')}/5
+
 Notes: {data.get('notes', '')}
 
 -------------------------
@@ -57,7 +62,8 @@ Sent via Nalazuri Website Form
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(SENDER_EMAIL, SENDER_PASSWORD)
             smtp.send_message(msg)
+        print("✅ Email sent successfully.")
         return True
     except Exception as e:
-        print(f"Error sending email: {e}")
+        print(f"❌ Error sending email: {e}")
         return False

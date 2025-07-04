@@ -62,30 +62,28 @@ const Inquiry = () => {
     }
   };
 
- 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch('http://localhost:5000/api/inquiry', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    });
+    try {
+      const response = await fetch('http://localhost:5000/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (response.ok) {
-      alert("✅ Inquiry sent successfully!");
-      // Optional: reset form here if needed
-    } else {
-      alert("❌ Failed to send: " + result.error);
+      if (response.ok) {
+        alert("✅ Inquiry sent successfully!");
+      } else {
+        alert("❌ Failed to send: " + result.error);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ Could not connect to server.");
     }
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    alert("❌ Could not connect to server.");
-  }
-};
+  };
 
   return (
     <div className="inquiry-page">
@@ -100,7 +98,6 @@ const handleSubmit = async (e) => {
         <h2>Ready to Start Planning Your Safari Adventure?</h2>
         <p>
           We’d love to help you design a unique and meaningful travel experience through Kenya’s breathtaking landscapes—from the iconic Maasai Mara to the serene shores of Lamu.
-          Whether you're dreaming of a luxury lodge safari, a beach escape, or a cultural immersion, we're here to tailor every detail just for you.
         </p>
         <p>
           Please take a moment to fill in our Safari Inquiry Questionnaire so we can create a personalized itinerary that matches your style, budget, and values.
@@ -108,7 +105,6 @@ const handleSubmit = async (e) => {
       </div>
 
       <form onSubmit={handleSubmit} className="inquiry-form">
-
         <h3>🧍 Personal Information</h3>
         <input type="text" name="fullName" placeholder="Full Name *" required onChange={handleChange} />
         <input type="email" name="email" placeholder="Email Address *" required onChange={handleChange} />
@@ -149,63 +145,44 @@ const handleSubmit = async (e) => {
         </select>
 
         <h3>🗺️ Destination & Experience</h3>
-
         <div className="destination-list">
           {[
             "Maasai Mara", "Tsavo East", "Tsavo West", "Lake Nakuru National Park",
             "Nairobi National Park", "Amboseli National Park", "Samburu National Reserve",
             "Meru National Park", "Kilifi", "Diani Beach", "Lamu", "Not sure yet"
           ].map(dest => (
-              <div key={dest} className="destination-row">
-                <span className="destination-label">{dest}</span>
-                <div className="destination-checkbox">
-                  <input
-                      type="checkbox"
-                      name="destinations"
-                      value={dest}
-                      onChange={handleChange}
-                  />
-                </div>
+            <div key={dest} className="destination-row">
+              <span className="destination-label">{dest}</span>
+              <div className="destination-checkbox">
+                <input type="checkbox" name="destinations" value={dest} onChange={handleChange} />
               </div>
+            </div>
           ))}
         </div>
 
         <div className="destination-list">
           <h3>🎯 Experiences</h3>
           {[
-            "Big Five Game Safari",
-            "Luxury Lodge Safari",
-            "Cultural & Community Tours",
-            "Beach + Safari Combo",
-            "Sustainable/Eco-friendly Safari",
-            "Romantic Getaway or Honeymoon",
-            "Family Safari",
-            "Solo Adventure"
-          ].map((exp) => (
-              <div key={exp} className="destination-row">
-                <span className="destination-label">{exp}</span>
-                <div className="destination-checkbox">
-                  <input
-                      type="checkbox"
-                      name="experiences"
-                      value={exp}
-                      onChange={handleChange}
-                  />
-                </div>
+            "Big Five Game Safari", "Luxury Lodge Safari", "Cultural & Community Tours",
+            "Beach + Safari Combo", "Sustainable/Eco-friendly Safari", "Romantic Getaway or Honeymoon",
+            "Family Safari", "Solo Adventure"
+          ].map(exp => (
+            <div key={exp} className="destination-row">
+              <span className="destination-label">{exp}</span>
+              <div className="destination-checkbox">
+                <input type="checkbox" name="experiences" value={exp} onChange={handleChange} />
               </div>
+            </div>
           ))}
 
           <input
-              type="text"
-              name="customExperience"
-              placeholder="Custom experience (optional)"
-              onChange={handleChange}
-              className="custom-experience-input"
+            type="text"
+            name="customExperience"
+            placeholder="Custom experience (optional)"
+            onChange={handleChange}
+            className="custom-experience-input"
           />
         </div>
-
-
-
 
         <h3>👨‍👩‍👧‍👦 Group Details</h3>
         <input type="number" name="travelers" placeholder="How many people are traveling?" onChange={handleChange} />
@@ -218,6 +195,20 @@ const handleSubmit = async (e) => {
         {formData.hasChildren === 'Yes' && (
           <input type="text" name="childrenAges" placeholder="Please specify ages" onChange={handleChange} />
         )}
+
+        <h3>🏨 Accommodation</h3>
+        <label>Preferred Accommodation Type</label>
+        <select name="accommodation" onChange={handleChange}>
+          <option value="">Select Accommodation Type</option>
+          <option value="Luxury Lodge">Luxury Lodge</option>
+          <option value="Mid-Range Lodge">Mid-Range Lodge</option>
+          <option value="Budget Camp">Budget Camp</option>
+          <option value="Tented Camp">Tented Camp</option>
+          <option value="Hotel">Hotel</option>
+          <option value="Eco-Friendly Lodge">Eco-Friendly Lodge</option>
+          <option value="Private Villa">Private Villa</option>
+          <option value="Not Sure Yet">Not Sure Yet</option>
+        </select>
 
         <h3>🌱 Travel Values (Rate 1–5)</h3>
         {[
