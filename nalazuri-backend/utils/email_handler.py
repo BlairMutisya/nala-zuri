@@ -2,10 +2,13 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
+from dotenv import load_dotenv
 
-# Replace with environment variables or secure secrets manager in production
-SENDER_EMAIL = "nalazuritravels2025@gmail.com"
-SENDER_PASSWORD = "npid doom ibqo uhwb"
+# Load environment variables
+load_dotenv()
+
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 
 def determine_recipient(inquiry_type):
     recipients = {
@@ -65,5 +68,5 @@ Sent via Nalazuri Website Form
         print("✅ Email sent successfully.")
         return True
     except Exception as e:
-        print(f"❌ Error sending email: {e}")
+        print(f" Error sending email: {e}")
         return False
