@@ -83,7 +83,7 @@ const MakeADifference = () => {
     <div className="make-a-difference">
       <div className="hero-section-difference">
         <div className="hero-overlay-difference">
-          <h1>Make a Difference</h1>
+          <h1>MAKE A DIFFERENCE</h1>
           <p>
             Travel with purpose! At <strong>Nala Zuri Travels</strong> – Make a
             Difference, we believe that every journey should leave a positive

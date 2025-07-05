@@ -31,6 +31,16 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  .hero-section-inquiry {
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; /* fills the section fully */
+    background-repeat: no-repeat;
+    height: 60vh;
+    padding: 2rem 1rem;
+  }
+}
 
 .hero-overlay-inquiry {
   position: absolute;
@@ -47,18 +57,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-overlay-inquiry h1 {
-  font-family: 'Poly', serif;
-  font-weight: 400;
-  font-size: 4.5rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin: 0;
+  font-family: "Poly", serif;
+  font-weight: 300;
+  font-size: 120px;
 }
+@media (max-width: 1024px) {
+  .hero-overlay-inquiry h1 {
+    font-size: 70px;
+  }
+
+  .hero-overlay-inquiry p {
+    font-size: 24px;
+  }
+
+}
+  @media (max-width: 768px) {
+  .hero-overlay-inquiry h1 {
+    font-size: 50px;
+    line-height: 2.0;
+  }
+  .hero-overlay-inquiry p {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .hero-overlay-inquiry h1 {
+    font-size: 34px;
+  }
+  .hero-overlay-inquiry p {
+    font-size: 18px;
+  }
+}
+
 
 .hero-overlay-inquiry p {
   font-family: 'Poly', serif;
   font-size: 1.4rem;
-  font-style: italic;
   margin-top: 1rem;
   max-width: 700px;
 }

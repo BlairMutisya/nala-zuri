@@ -11,6 +11,17 @@
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .our-story {
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; /* fills the section fully */
+    background-repeat: no-repeat;
+    height: 60vh;
+    padding: 2rem 1rem;
+  }
+}
+
 .our-story .overlay {
   position: absolute;
   inset: 0;
@@ -109,7 +120,7 @@
   }
 
   .our-story .overlay h1 {
-    font-size: 19vw;
+    font-size: 50px !important;
   }
 
   .our-story .overlay p {

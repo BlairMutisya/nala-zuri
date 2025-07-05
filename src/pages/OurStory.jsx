@@ -15,7 +15,7 @@ const OurStory = () => {
       {/* Hero Section */}
       <section className="our-story">
         <div className="overlay">
-          <h1>Our Story</h1>
+          <h1>OUR STORY</h1>
           <p>Passion for Travel, Driven by Adventure</p>
         </div>
       </section>

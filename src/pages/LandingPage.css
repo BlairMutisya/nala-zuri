@@ -14,32 +14,31 @@ body, html {
 }
 
 /* Hero Section with Background Image */
-.hero-section {
+.hero-section-landingpage {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(/public/bg-nalazuri.jpg) no-repeat center center/cover;
-  background-attachment: fixed; /* Enables parallax */
+  background: url('../assets/bg-nalazuri.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
 }
 
-/* Fallback for mobile devices that don’t support fixed backgrounds well */
+/* Mobile fallback */
 @media (max-width: 768px) {
-  .hero-section {
-    background-attachment: fixed;
-    background-position: center top;
-    height: auto;
-    min-height: 80vh;
+  .hero-section-landingpage {
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh; /* or adjust as needed */
     padding: 2rem 1rem;
-    width:auto;
   }
 }
 
-/* Overlay Effect */
+
+
+
+/*Overlay */
 .overlay {
   position: absolute;
   top: 0;
@@ -47,13 +46,13 @@ body, html {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* Content Inside the Hero Section */
+/* Hero Text */
 .content {
   position: absolute;
-  z-index: 3; /* Above the overlay */
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -62,17 +61,63 @@ body, html {
 }
 
 .content h2 {
-  font-size: 24px;
-  letter-spacing: 2px;
   font-family: "Lora", serif;
+  font-size: 28px;
   font-weight: 300;
+  letter-spacing: 1.5px;
   color: white;
 }
 
 .content h1 {
- font-family: "Poly", serif;
+  font-family: "Poly", serif;
   font-weight: 300;
-  font-size: 140px;
+  font-size: 120px;
+  line-height: 1.1;
+}
+
+.content h1 {
+  font-family: "Poly", serif;
+  font-weight: 300;
+  font-size: 120px;
+  line-height: 1.1;
+}
+
+.content h2 {
+  font-family: "Lora", serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .content h1 {
+    font-size: 70px;
+  }
+  .content h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 50px;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 55px;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
 }
 
 /* Social Icons */
@@ -100,6 +145,27 @@ body, html {
 .social-icons svg:hover {
   color: #D4AF37;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .social-icons {
+    position: absolute; /* Stick to bottom */
+    left: 50%;
+    bottom: 20px; /* Set to 20px as requested */
+    transform: translateX(-50%); /* Center align */
+    display: flex;
+    flex-direction: row; /* Change layout to horizontal */
+    justify-content: center;
+    width: 80%;
+    font-size: 30px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    font-size: 25px;
+    gap: 20px;
+  }
 }
 
 /* New Section Styling */
@@ -160,31 +226,43 @@ font-family: "Playfair Display", serif;
   }
 }
 .full-width-image {
-  width: 90%;  
+  width: 90%;
   height: 90vh;
   background: url('../../src/assets/image1.jpg') no-repeat center center/cover;
-  margin: 0 auto;  
-  display: flex;    
+  margin: 0 auto;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0px; 
-    background-attachment: fixed;
+  border-radius: 0px;
+  background-attachment: fixed; /* Parallax effect */
 }
-/* Tablet responsiveness */
+
+/* Tablet screens */
 @media (max-width: 1024px) {
   .full-width-image {
+    width: 95%;
     height: 70vh;
-    background-attachment: scroll; /* Avoid janky scroll on mobile/tablets */
+    background-attachment: scroll; /* Avoid parallax glitches */
   }
 }
 
-/* Mobile responsiveness */
+/* Mobile screens */
 @media (max-width: 768px) {
   .full-width-image {
     width: 100%;
     height: 60vh;
+    background-attachment: scroll; /* Parallax doesn’t work well on mobile */
+    background-size: cover;
+    background-position: center;
     padding: 0 1rem;
-    background-attachment: scroll; /* Fixed background causes issues on mobile */
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .full-width-image {
+    height: 50vh;
+    background-size: cover;
   }
 }
 
@@ -194,7 +272,7 @@ font-family: "Playfair Display", serif;
   align-items: center;
   justify-content: center;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 20px;
 }
 
@@ -210,12 +288,14 @@ font-family: "Playfair Display", serif;
   font-family: "Playfair Display", serif;
   text-align: right;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 .vertical-line {
   width: 5px;
   height: 120px;
   background-color: #D4AF37; /* Gold color */
+  /*margin-bottom: 10px;*/
 }
 
 .nalazuri-right {
@@ -223,9 +303,6 @@ font-family: "Playfair Display", serif;
   font-size: 20px;
   color: #333;
   line-height: 1.6;
-/* margin-left: -100px;
-margin-bottom: auto; */
-/* padding-left: 80px; */
 }
 
 .nalazuri-right strong {
@@ -250,9 +327,10 @@ margin-bottom: auto; */
   }
 
   .vertical-line {
-    width: 50px;
+    width: 11rem;
     height: 3px;
-    margin: 10px auto;
+    margin: -0.5rem auto 0;
+    margin-bottom: 25px;
   }
 
   .nalazuri-right {
@@ -271,7 +349,7 @@ margin-bottom: auto; */
 
 .featured-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .featured-title {
@@ -280,19 +358,37 @@ margin-bottom: auto; */
   color: #2d3748;
 }
 
-.featured-subtitle {
-  font-size: 1.125rem;
-  color: white;
-  margin-top: 1rem;
-}
-
 .featured-underline {
   width: 6rem;
   height: 4px;
-  background-color: #facc15;
+  background-color: #D4AF37;
   margin: 1.5rem auto 0;
 }
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .featured-underline {
+    width: 5rem;
+    height: 3px;
+  }
+}
 
+/* Mobile screens */
+@media (max-width: 768px) {
+  .featured-underline {
+    width: 11rem;
+    height: 4px;
+    margin: -0.5rem auto 0;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .featured-underline {
+    width: 11rem;
+    height: 4px;
+    margin: -0.5rem auto 0;
+  }
+}
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -402,38 +498,4 @@ margin-bottom: auto; */
 
 .featured-main-button:hover {
   background-color: #eab308;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .content h1 {
-    font-size: 90px;
-    font-weight: 500;
-  }
-  .content h2 {
-    font-size: 30px;
-    font-weight: 200;
-  }
-}
-/* Switch to flex-row for smaller screens */
-@media (max-width: 768px) { 
-  .social-icons {
-    position: absolute; /* Stick to bottom */
-    left: 50%;
-    bottom: 20px; /* Set to 20px as requested */
-    transform: translateX(-50%); /* Center align */
-    display: flex;
-    flex-direction: row; /* Change layout to horizontal */
-    justify-content: center;
-    width: 100%;
-    font-size: 30px;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) { 
-  .social-icons {
-    font-size: 30px;
-    gap: 20px;
-  }
 }

@@ -15,7 +15,7 @@ const HowToExplore = () => {
         style={{ backgroundImage: `url(${howToExplore})` }}
       >
         <div className="hero-overlay-how">
-          <h1>How to Explore</h1>
+          <h1>HOW TO EXPLORE</h1>
         </div>
       </div>
       {/* Main Content */}

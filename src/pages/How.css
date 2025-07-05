@@ -1,4 +1,3 @@
-/* HowToExplore.css */
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap");
 
@@ -12,22 +11,24 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-attachment: fixed; /* Enables parallax */
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   z-index: 1;
+  text-align: center;
 }
 
-/* Fallback for mobile devices that don’t support fixed backgrounds well */
 @media (max-width: 768px) {
   .hero-section-how {
-    background-attachment: fixed;
-    background-position: center top;
-    height: auto;
-    min-height: 80vh;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; /* fills the section fully */
+    background-repeat: no-repeat;
+    height: 60vh;
     padding: 2rem 1rem;
   }
 }
+
 
 .hero-overlay-how {
   position: absolute;
@@ -38,14 +39,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
   padding: 20px;
-  top: 0;
-  left: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
-
 }
 
 .hero-overlay-how h1 {
@@ -54,173 +51,54 @@
   font-size: 140px;
 }
 
-/* How It Works Section */
-.how-it-works {
-  text-align: center;
+@media (max-width: 768px) {
+  .hero-overlay-how h1 {
+    font-size: 50px !important;
+    line-height: 2.0;
+  }
 }
 
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #333;
+@media (max-width: 480px) {
+  .hero-overlay-how h1 {
+    font-size: 42px !important;
+  }
 }
 
-.steps-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+/* Container */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+/* Itineraries & Solo Sections */
+.itineraries-section,
+.solo-adventures-section {
+  margin-bottom: 1.5rem;  /* Reduced from 4rem */
+  padding: 2rem 1rem;
 }
 
 @media (min-width: 768px) {
-  .steps-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .itineraries-section,
+  .solo-adventures-section {
+    padding: 2rem 4.5rem;
+    /*margin-bottom: 1rem;  !* Reduced from default 4rem *!*/
   }
 }
 
-.step-box {
-  background-color: #f9fafb;
-  padding: 40px 30px;
-  border-radius: 20px;
-  transition: box-shadow 0.3s ease;
-}
 
-.step-box:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
-
-.step-icon {
-  width: 64px;
-  height: 64px;
-  background-color: #c4c4c4;
-  color: #d4af37;
-  border-radius: 50%;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px auto;
-}
-
-.step-box h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #222;
-}
-
-.step-box p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Call to Action */
-.call-to-action {
-  /* margin-top: 100px; */
-  /* background-color: #fef3c7; */
-  /* border-radius: 24px; */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.call-to-action h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.call-to-action p {
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  font-size: 18px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.cta-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-
-.cta-primary {
-  background-color: #d4af37;
-  color: white;
-  padding: 14px 32px;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cta-primary:hover {
-  background-color: #edb80a;
-}
-
-.cta-secondary {
-  background-color: white;
-  color: #d4af37;
-  border: 2px solid #d4af37;
-  padding: 14px 32px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cta-secondary:hover {
-  background-color: #fff7ed;
-}
-
-/* For small screens like mobile devices */
-@media (max-width: 768px) {
-  .hero-overlay-how h1 {
-    font-size: 20vw; /* Increases flexibility for small screens */
-  }
-}
-
-/* For very small screens */
-@media (max-width: 480px) {
-  .hero-overlay-how h1 {
-    font-size: 19vw; /* Further adjusts for smaller devices */
-  }
-}
-.how-image {
-  width: 50%; /* Full width of the container */
-  max-width: 500px; /* Or any desired fixed size */
-  height: 50%; /* Maintain aspect ratio */
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(30, 28, 28, 0.1);
-}
-.section-container {
-  max-width: 1200px; /* Sets the maximum width of the container */
-  margin: 0 auto; /* Centers the container horizontally with equal side margins */
-  padding: 4rem 2.5rem; /* Adds padding on top and bottom, and on the left and right */
-}
-
-.itineraries-section {
-  margin-bottom: 5rem;
-  padding: 2rem 4.5rem;
-}
-.solo-adventures-section {
-  margin-bottom: 5rem;
-  padding: 2rem 4.5rem;
-}
-
+/* Flex Layout */
 .flex-row {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  align-items: center;
+  gap: 2rem;
+  align-items: stretch;
 }
 
 @media (min-width: 768px) {
   .flex-row {
     flex-direction: row;
+    align-items: center;
   }
 
   .flex-row.reverse {
@@ -228,29 +106,45 @@
   }
 }
 
+/* Width Control */
 .half-width {
   width: 100%;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 768px) {
   .half-width {
     width: 50%;
+    padding: 0 1rem;
   }
 }
 
+/* Typography */
 .section-title {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #1f2937; /* gray-800 */
-  margin-bottom: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
 }
 
 .section-paragraph {
-  color: #4b5563; /* gray-600 */
+  color: #4b5563;
   margin-bottom: 1.5rem;
   line-height: 1.75;
+  font-size: 1rem;
 }
 
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+/* Bullet List */
 .bullet-list {
   display: flex;
   flex-wrap: wrap;
@@ -262,22 +156,23 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: #f9fafb; /* gray-50 */
+  background-color: #f9fafb;
   padding: 1rem;
   border-radius: 0.5rem;
 }
 
 .bullet-item i {
-  color: #d4af37; /* amber-600 */
+  color: #d4af37;
   font-size: 1.25rem;
 }
 
 .bullet-item span {
-  color: #374151; /* gray-700 */
+  color: #374151;
 }
 
+/* Button */
 .primary-button {
-  background-color: #d4af37; /* amber-600 */
+  background-color: #d4af37;
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
@@ -292,32 +187,137 @@
 }
 
 .primary-button:hover {
-  background-color: #edb80a; /* amber-700 */
+  background-color: #edb80a;
+}
+
+/* Image Handling */
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-box img {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  aspect-ratio: 4 / 5; /* Maintains 400x500 proportion */
+  max-width: 100%;
+  height: 70%;
   object-fit: cover;
   object-position: center;
+  border-radius: 12px;
   display: block;
 }
 
-/* Tablet-specific tweaks */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .image-box img {
-    max-width: 350px;
+    max-width: 400px;   /* Reduce width */
+    height: 500px;       /* Let height adjust proportionally */
+    aspect-ratio: auto; /* Keep natural aspect */
+    object-fit: cover;
   }
 }
 
-/* Mobile-specific tweaks */
+
 @media (max-width: 768px) {
   .image-box img {
     max-width: 100%;
-    aspect-ratio: auto;
     height: auto;
   }
 }
 
+/* --- HOW IT WORKS Section --- */
+.how-it-works {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 0.5rem; /* VERY tight spacing */
+}
+
+@media (min-width: 768px) {
+  .how-it-works {
+    padding: 0rem 2rem;
+    margin-bottom: 0rem; /* Eliminated gap below this section */
+  }
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-box {
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+
+.step-box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #e5e7eb;
+  color: #d4af37;
+  border-radius: 9999px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.step-box h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.step-box p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* --- CALL TO ACTION Section --- */
+.call-to-action {
+  border-radius: 1.5rem;
+  padding: 3rem 1.5rem;
+  margin: 0 auto 2rem auto; /* Minimal top margin */
+  text-align: center;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  .call-to-action {
+    padding: 3rem 3rem;
+    margin-top: 1rem; /* Reduced space from previous section */
+    margin-bottom: 3rem;
+  }
+}
+.call-to-action h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+}
+
+.call-to-action p {
+  font-size: 1.125rem;
+  color: #374151;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.75;
+}

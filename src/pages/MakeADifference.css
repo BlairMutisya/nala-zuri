@@ -6,29 +6,48 @@
   font-family:  "Playfair Display", serif;
   text-align: center;
 }
-
 .hero-section-difference {
-  position: relative;
-  height: 100vh;
-  background: url('../assets/Tree-Planting.jpg') center/cover no-repeat;
   position: relative;
   width: 100%;
   height: 100vh;
-  background-attachment: fixed; /* Enables parallax */
+  background-image: url('../assets/Tree-Planting.jpg');
+  background-attachment: fixed; /* Parallax on desktop */
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   z-index: 1;
 }
-/* Fallback for mobile devices that don’t support fixed backgrounds well */
+
+/* Mobile fallback (avoid fixed bg + show full image) */
 @media (max-width: 768px) {
   .hero-section-difference {
-    background-attachment: fixed;
-    background-position: center top;
-    height: auto;
-    min-height: 80vh;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; /* fills the section fully */
+    background-repeat: no-repeat;
+    height: 60vh;
     padding: 2rem 1rem;
   }
 }
+
+/* Force mobile h1 resizing */
+@media (max-width: 768px) {
+  .hero-overlay-difference h1 {
+    font-size: 50px !important;
+    line-height: 2.0;
+    word-break: break-word;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay-difference h1 {
+    font-size: 42px !important;
+  }
+}
+
+
+
 .hero-overlay-difference {
   position: absolute;
   inset: 0;
@@ -42,10 +61,34 @@
 }
 
 .hero-overlay-difference h1 {
- font-family: "Poly", serif;
+  font-family: "Poly", serif;
   font-weight: 300;
-  font-size: 120px;
+  font-size: 120px; /* Default desktop size */
+  text-align: center;
 }
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .hero-overlay-difference h1 {
+    font-size: 70px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .hero-overlay-difference h1 {
+    font-size: 46px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .hero-overlay-difference h1 {
+    font-size: 34px;
+  }
+}
+
+
 
 .content-difference {
   padding: 40px 20px;
@@ -93,7 +136,7 @@
   align-items: center;
   background: #e8f5e9;
   padding: 40px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   margin-top: 40px;
 }
 
@@ -114,6 +157,29 @@
 .text-content p {
   font-size: 16px;
   margin: 10px 0;
+}
+/* Stack vertically on mobile */
+@media (max-width: 768px) {
+  .travel-green-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-right: 0;
+  }
+
+  .image-content {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .image-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .learn-more-btn {

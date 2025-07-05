@@ -1,6 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
-import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import SafariAdventures from "../assets/Safari Adventures.jpg"
 import CoastalRetreats from "../assets/Coastal Retreats.jpg"
 import CulturalImmersion from "../assets/Cultural Immersion.jpg"
@@ -15,7 +15,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       {/* Hero Section with Background Image */}
-      <div className="hero-section">
+      <div className="hero-section-landingpage">
         <div className="overlay"></div>
         <div className="content">
           <h2>EXPLORE THE BEAUTY OF</h2>
@@ -25,9 +25,6 @@ const LandingPage = () => {
         <div className="social-icons">
           <a href="https://www.instagram.com/nalazuritravels/" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
-          </a>
-          <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
-            <FaFacebook />
           </a>
           <a href="https://wa.me/+254797106436" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp />
@@ -90,9 +87,9 @@ const LandingPage = () => {
       <div className="featured-container">
         <div className="featured-header">
           <h2 className="featured-title">GALLERY</h2>
-          <p className="featured-subtitle">
-            Discover our carefully curated selection of extraordinary adventures
-          </p>
+          {/*<p className="featured-subtitle">*/}
+          {/*  Discover our carefully curated selection of extraordinary adventures*/}
+          {/*</p>*/}
           <div className="featured-underline"></div>
         </div>
 

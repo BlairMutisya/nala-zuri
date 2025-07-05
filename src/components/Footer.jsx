@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Nalazuri Travels</h3>
             <p className="footer-description">
-              Promoting sustainable travel and environmental conservation since 2020.
+              Promoting sustainable travel and environmental conservation since 2025.
             </p>
             <div className="footer-socials">
               <a
