@@ -23,7 +23,6 @@ const Calendar = () => {
       image:TsavoGallery3,
       color: "bg-stone-600",
       lightColor: "bg-stone-100",
-      available: true,
     },
     {
       id: 2,
@@ -36,7 +35,6 @@ const Calendar = () => {
       image:Samburu1,
       color: "bg-emerald-500",
       lightColor: "bg-emerald-100",
-      available: true,
     },
     {
       id: 3,
@@ -49,7 +47,6 @@ const Calendar = () => {
       image:MaasaiMaraGallery6,
       color: "bg-rose-500",
       lightColor: "bg-rose-100",
-      available: true,
     },
     {
       id: 4,
@@ -62,7 +59,6 @@ const Calendar = () => {
       image:AmboseliGallery4,
       color: "bg-blue-500",
       lightColor: "bg-blue-100",
-      available: true,
     },
   ];
 
@@ -88,27 +84,6 @@ const Calendar = () => {
 
   return (
     <div className="safari-container">
-      {/* Hero Section
-      <section className="hero-section">
-        <div className="hero-content">
-          <div className="branding">
-            <img src="/Nalazuri logo.png" alt="Logo" className="logo" />
-            <div>
-              <h1 className="title">Nalazuri Safaris</h1>
-              <p className="subtitle">Official Safari Calendar 2025</p>
-            </div>
-          </div>
-          <div className="doc-info">
-            <p>Document #: NS-2025-001</p>
-            <p>Issue Date: June 26, 2025</p>
-          </div>
-          <p className="intro">Join Nalazuri for exciting group safaris across Kenya's top parks.</p>
-          <p className="description">
-            Each 3-day, 2-night adventure is in a comfortable 4x4 Land Cruiser. Perfect for wildlife and scenery.
-          </p>
-        </div>
-      </section> */}
-
       {/* Filters */}
       <div className="tab-buttons">
         <button onClick={() => setActiveTab("all")} className={`tab-button ${activeTab === "all" ? "active" : ""}`}>
@@ -156,10 +131,6 @@ const Calendar = () => {
                         getHighlightDays(safari.dates)
                       )}
                     </div>
-                  </div>
-                  <div className="availability">
-                    <span className={`dot ${safari.available ? "green" : "red"}`}></span>
-                    <span>{safari.available ? "Spaces Available" : "Fully Booked"}</span>
                   </div>
                 </div>
               </div>

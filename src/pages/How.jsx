@@ -27,7 +27,7 @@ const HowToExplore = () => {
               <h2 className="section-title">Curated Itineraries</h2>
               <p className="section-paragraph">
                 Plan your perfect getaway with our expertly crafted itineraries!
-                Start by generating an estimated invoice based on your preferred
+                Start by planning based on your preferred
                 destinations, travel dates, and experiences with the{" "}
                 <strong>NALAZURI TRAVELS</strong>. If you love what you see,
                 reach out to our friendly team, and we’ll refine every detail to
@@ -43,7 +43,7 @@ const HowToExplore = () => {
                 </div>
                 <div className="bullet-item">
                   <i className="fas fa-receipt"></i>
-                  <span>Inquiries</span>
+                  <span>Flexibility</span>
                 </div>
                 <div className="bullet-item">
                   <i className="fas fa-user-check"></i>

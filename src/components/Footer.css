@@ -40,8 +40,8 @@
 
 .footer-socials a {
   color: #D4AF37;;
-  margin-right: 1rem;
-  transition: color 0.3s;
+  margin-left: 0.5rem;
+  font-size: 28px;
 }
 
 .footer-socials a:hover {
@@ -64,6 +64,7 @@
   color: #0b0b0b;
   text-decoration: none;
   transition: color 0.3s;
+
 }
 
 .footer-links a:hover {
