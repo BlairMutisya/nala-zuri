@@ -1,9 +1,6 @@
 import React from "react";
 import "./OurStory.css";
-// import storyImage from "../assets/Story.jpg";
-// import safariImage from "../assets/safari-lodge.jpg";
 import MercyImage from "../assets/MERCY & TERESA CO FOUNDERS.jpeg";
-// import TeresaImage from "../assets/profile-placeholder.jpg";
 import RoseImage from "../assets/Rose.jpg";
 import GloriaImage from "../assets/Gloria.jpg";
 import Footer from "../components/Footer";

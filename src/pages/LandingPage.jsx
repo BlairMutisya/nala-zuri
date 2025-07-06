@@ -1,12 +1,14 @@
 import React from "react";
 import "./LandingPage.css";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import SafariAdventures from "../assets/Safari Adventures.jpg"
-import CoastalRetreats from "../assets/Coastal Retreats.jpg"
-import CulturalImmersion from "../assets/Cultural Immersion.jpg"
-import LuxuryStays from "../assets/Luxury Stays.jpg"
-import MaasaiMara1 from '../assets/Maasai Mara 1.jpeg';
-import Tsavo4 from '../assets/Tsavo 4.jpg';
+import Giraffe from "../assets/Girrafe.jpg"
+import Elephant from "../assets/Elephant.jpeg"
+import Leopard from "../assets/Leopard.jpeg"
+import Visit from "../assets/Visit.jpeg"
+import Antelope from "../assets/Antelope.jpg"
+import GroupPhoto from '../assets/Group.jpg';
+import Lion from '../assets/Lion.jpeg';
+import Zebra from "../assets/Meru (2).JPG"
 
 import Footer from "../components/Footer";
 
@@ -44,7 +46,7 @@ const LandingPage = () => {
           <p>
             Experience Kenya in unparalleled style, filled with curated
             discoveries. Begin your journey with an intimate{" "}
-            <strong>safaris</strong>, immersing yourself in the raw beauty of
+            <strong>Safaris</strong>, immersing yourself in the raw beauty of
             the Maasai Mara or the serene landscapes of Amboseli, where
             elephants roam beneath the shadow of Mount Kilimanjaro. Retreat to
             exclusive lodges and tented camps, where personalized service and
@@ -72,15 +74,12 @@ const LandingPage = () => {
         </div>
         <div className="nalazuri-right">
           <p>
-            At <strong>Nalazuri Travels</strong>, we go beyond creating
-            extraordinary journeys—we ensure they leave a positive impact.
-            Through our commitment to sustainability, we proudly collaborate
-            with two key initiatives:
-            <strong> Travel Green, Plant a Tree</strong>, which promotes
-            environmental conservation through
-            <strong> tree planting</strong>, and{" "}
-            <strong>Travel for Change</strong>.
+            At <strong>Nalazuri Travels</strong>, we don’t just craft unforgettable travel experiences—we ensure they make a meaningful difference.
+            Our dedication to <strong>sustainability</strong> is reflected in our support of two core initiatives:
+            <strong> Travel Green, Plant a Tree</strong>, focused on <strong>environmental conservation</strong> through <strong>tree planting</strong>,
+            and <strong>Travel for Change</strong>, which <strong>empowers local communities</strong> through impactful <strong>development projects</strong>.
           </p>
+
         </div>
       </div>
          <section className="featured-section">
@@ -96,45 +95,30 @@ const LandingPage = () => {
         <div className="featured-grid">
           {[
             {
-              img: SafariAdventures,
-              title: "Safari Adventures",
-              desc: "Witness the majesty of African wildlife in their natural habitat",
+              img: Visit,
             },
 
             {
-              img: CoastalRetreats,
-              title: "Coastal Retreats",
-              desc: "Unwind in luxury along Kenya's pristine coastline",
+              img: Giraffe,
             },
             {
-              img: CulturalImmersion,
-              title: "Cultural Immersion",
-              desc: "Experience the rich traditions of Kenya's diverse cultures",
+              img: GroupPhoto,
             },
             {
-              img: LuxuryStays,
-              title: "Luxury Stays",
-              desc: "Indulge in world-class accommodations in stunning locations",
+              img: Antelope,
+
             },
             {
-              img: LuxuryStays,
-              title: "Eco-Luxury Escapes",
-              desc: "Stay in environmentally conscious lodges blending comfort and sustainability",
+              img: Elephant,
             },
             {
-              img: Tsavo4,
-              title: "Big Five Expeditions",
-              desc: "Track lions, elephants, leopards, rhinos, and buffalos across iconic parks",
+              img: Leopard,
             },
             {
-              img: CoastalRetreats,
-              title: "Seaside Serenity",
-              desc: "Relax on sun-kissed beaches and explore vibrant marine life",
+              img: Lion,
             },
             {
-              img: MaasaiMara1,
-              title: "Tribal Encounters",
-              desc: "Engage with local communities and discover Kenya’s heritage firsthand",
+              img: Zebra,
             },
           ].map((item, index) => (
             <div className="featured-card" key={index}>

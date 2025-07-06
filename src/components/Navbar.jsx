@@ -48,90 +48,75 @@ const Navbar = () => {
                 onMouseEnter={() => setSafarisOpen(true)}
                 onMouseLeave={() => setSafarisOpen(false)}
               >
-                Safaris ▸
+                SAFARIS ▸
                 {safarisOpen && (
-                  <ul className="sub-dropdown">
-                    <li>
-                      <Link
-                        to="/olpejeta"
-                        className={
-                          location.pathname === "/olpejeta" ? "active" : ""
-                        }
-                      >
-                        Ol Pejeta Conservancy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/maasai-mara"
-                        className={
-                          location.pathname === "/maasai-mara" ? "active" : ""
-                        }
-                      >
-                        Maasai Mara National Reserve
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/amboseli"
-                        className={
-                          location.pathname === "/amboseli" ? "active" : ""
-                        }
-                      >
-                        Amboseli National Park
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/tsavo"
-                        className={
-                          location.pathname === "/tsavo" ? "active" : ""
-                        }
-                      >
-                        Tsavo National Parks (East & West)
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/nakuru"
-                        className={
-                          location.pathname === "/nakuru" ? "active" : ""
-                        }
-                      >
-                        Lake Nakuru National Park
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/samburu"
-                        className={
-                          location.pathname === "/samburu" ? "active" : ""
-                        }
-                      >
-                        Samburu National Reserve
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/nairobi"
-                        className={
-                          location.pathname === "/nairobi" ? "active" : ""
-                        }
-                      >
-                        Nairobi National Park
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/meru"
-                        className={
-                          location.pathname === "/meru" ? "active" : ""
-                        }
-                      >
-                        Meru National Park
-                      </Link>
-                    </li>
-                  </ul>
+                    <ul className="sub-dropdown">
+                      <li>
+                        <Link
+                            to="/amboseli"
+                            className={location.pathname === "/amboseli" ? "active" : ""}
+                        >
+                          AMBOSELI NATIONAL PARK
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/lake-nakuru"
+                            className={location.pathname === "/nakuru" ? "active" : ""}
+                        >
+                          LAKE NAKURU NATIONAL PARK
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/maasai-mara"
+                            className={location.pathname === "/maasai-mara" ? "active" : ""}
+                        >
+                          MAASAI MARA NATIONAL RESERVE
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/meru"
+                            className={location.pathname === "/meru" ? "active" : ""}
+                        >
+                          MERU NATIONAL PARK
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/nairobi"
+                            className={location.pathname === "/nairobi" ? "active" : ""}
+                        >
+                          NAIROBI NATIONAL PARK
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/olpejeta"
+                            className={location.pathname === "/olpejeta" ? "active" : ""}
+                        >
+                          OL PEJETA CONSERVANCY
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/samburu"
+                            className={location.pathname === "/samburu" ? "active" : ""}
+                        >
+                          SAMBURU NATIONAL RESERVE
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/tsavo"
+                            className={location.pathname === "/tsavo" ? "active" : ""}
+                        >
+                          TSAVO NATIONAL PARKS (EAST & WEST)
+                        </Link>
+                      </li>
+                    </ul>
+
                 )}
               </li>
 
@@ -141,50 +126,43 @@ const Navbar = () => {
                 onMouseEnter={() => setSwahiliOpen(true)}
                 onMouseLeave={() => setSwahiliOpen(false)}
               >
-                Swahili Coast ▸
+                SWAHILI COAST ▸
                 {swahiliOpen && (
-                  <ul className="sub-dropdown">
-                    <li>
-                      <Link
-                        to="/lamu"
-                        className={
-                          location.pathname === "/lamu" ? "active" : ""
-                        }
-                      >
-                        Lamu
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/watamu"
-                        className={
-                          location.pathname === "/watamu" ? "active" : ""
-                        }
-                      >
-                        Watamu
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/kilifi"
-                        className={
-                          location.pathname === "/kilifi" ? "active" : ""
-                        }
-                      >
-                        Kilifi
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/diani"
-                        className={
-                          location.pathname === "/diani" ? "active" : ""
-                        }
-                      >
-                        Diani
-                      </Link>
-                    </li>
-                  </ul>
+                    <ul className="sub-dropdown">
+                      <li>
+                        <Link
+                            to="/diani"
+                            className={location.pathname === "/diani" ? "active" : ""}
+                        >
+                          DIANI
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/kilifi"
+                            className={location.pathname === "/kilifi" ? "active" : ""}
+                        >
+                          KILIFI
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/lamu"
+                            className={location.pathname === "/lamu" ? "active" : ""}
+                        >
+                          LAMU
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                            to="/watamu"
+                            className={location.pathname === "/watamu" ? "active" : ""}
+                        >
+                          WATAMU
+                        </Link>
+                      </li>
+                    </ul>
+
                 )}
               </li>
             </ul>
@@ -270,54 +248,52 @@ const Navbar = () => {
                       setSwahiliOpen(false);
                     }}
                   >
-                    Safaris ▸
+                    SAFARIS ▸
                   </div>
                   {safarisOpen && (
-                    <ul className="mobile-sub-dropdown">
-                      <li>
-                        <Link to="/olpejeta" onClick={() => setMenuOpen(false)}>
-                          Ol Pejeta Conservancy
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/maasai-mara"
-                          onClick={() => setMenuOpen(false)}
-                        >
-                          Maasai Mara National Reserve
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/amboseli" onClick={() => setMenuOpen(false)}>
-                          Amboseli National Park
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/tsavo" onClick={() => setMenuOpen(false)}>
-                          Tsavo National Parks
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/nakuru" onClick={() => setMenuOpen(false)}>
-                          Lake Nakuru National Park
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/samburu" onClick={() => setMenuOpen(false)}>
-                          Samburu National Reserve
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/nairobi" onClick={() => setMenuOpen(false)}>
-                          Nairobi National Park
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/meru" onClick={() => setMenuOpen(false)}>
-                          Meru National Park
-                        </Link>
-                      </li>
-                    </ul>
+                      <ul className="mobile-sub-dropdown">
+                        <li>
+                          <Link to="/amboseli" onClick={() => setMenuOpen(false)}>
+                            AMBOSELI NATIONAL PARK
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/lake-nakuru" onClick={() => setMenuOpen(false)}>
+                            LAKE NAKURU NATIONAL RESERVE
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/maasai-mara" onClick={() => setMenuOpen(false)}>
+                            MAASAI MARA NATIONAL RESERVE
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/meru" onClick={() => setMenuOpen(false)}>
+                            MERU NATIONAL RESERVE
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/nairobi" onClick={() => setMenuOpen(false)}>
+                            NAIROBI NATIONAL RESERVE
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/olpejeta" onClick={() => setMenuOpen(false)}>
+                            OL PEJETA CONSERVANCY
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/samburu" onClick={() => setMenuOpen(false)}>
+                            SAMBURU NATIONAL RESERVE
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/tsavo" onClick={() => setMenuOpen(false)}>
+                            TSAVO NATIONAL PARKS
+                          </Link>
+                        </li>
+                      </ul>
+
                   )}
                 </li>
 
@@ -329,31 +305,32 @@ const Navbar = () => {
                       setSafarisOpen(false);
                     }}
                   >
-                    Swahili Coast ▸
+                    SWAHILI COAST ▸
                   </div>
                   {swahiliOpen && (
-                    <ul className="mobile-sub-dropdown">
-                      <li>
-                        <Link to="/lamu" onClick={() => setMenuOpen(false)}>
-                          Lamu
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/watamu" onClick={() => setMenuOpen(false)}>
-                          Watamu
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/kilifi" onClick={() => setMenuOpen(false)}>
-                          Kilifi
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/diani" onClick={() => setMenuOpen(false)}>
-                          Diani
-                        </Link>
-                      </li>
-                    </ul>
+                      <ul className="mobile-sub-dropdown">
+                        <li>
+                          <Link to="/diani" onClick={() => setMenuOpen(false)}>
+                            DIANI
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/kilifi" onClick={() => setMenuOpen(false)}>
+                            KILIFI
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/lamu" onClick={() => setMenuOpen(false)}>
+                            LAMU
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/watamu" onClick={() => setMenuOpen(false)}>
+                            WATAMU
+                          </Link>
+                        </li>
+                      </ul>
+
                   )}
                 </li>
               </ul>
