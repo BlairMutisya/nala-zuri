@@ -8,9 +8,11 @@ import Amboseli2 from '../assets/Amboseli 2.jpg';
 import Amboseli3 from '../assets/Amboseli 3.jpg';
 import Amboseli4 from '../assets/Amboseli 4.jpg';
 import Amboseli5 from '../assets/Amboseli 5.jpg'; 
-import AmboseliGallery2 from '../assets/Amboseli Gallery 2.jpeg'; 
+import Amboseli6 from '../assets/Amboseli 6.jpg';
+import Amboseli7 from '../assets/Amboseli 7.jpg';
+import AmboseliGallery2 from '../assets/Amboseli Gallery 2.jpg'; 
 import AmboseliGallery3 from '../assets/Amboseli Gallery 3.jpeg'; 
-import AmboseliGallery4 from '../assets/Amboseli Gallery 4.jpeg'; 
+import AmboseliGallery4 from '../assets/Amboseli Gallery 4.jpg'; 
 import AmboseliGallery6 from '../assets/Amboseli Gallery 6.jpg'; 
 import Amboseligallery5 from '../assets/Amboseli gallery 5.jpg'; 
 
@@ -47,6 +49,8 @@ const Amboseli = () => {
           <img src={Amboseli3} alt="Mount Kilimanjaro view" />
           <img src={Amboseli4} alt="Wildlife in Amboseli" />
           <img src={Amboseli5} alt="Birds in wetlands" />
+          <img src={Amboseli6} alt="Lion in the Jungle" />
+          <img src={Amboseli7} alt="Wild animals" />
           <img src={AmboseliGallery2} alt="Amboseli Gallery 2" />
           <img src={AmboseliGallery3} alt="Amboseli Gallery 3" />
           <img src={AmboseliGallery4} alt="Amboseli Gallery 4" />

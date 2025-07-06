@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import SoloAdventures from "../assets/soloAdventures.JPG";
 import Itineraries from "../assets/Itineraries.jpg";
 import howToExplore from "../assets/HowToExplore.jpg";
@@ -18,6 +18,7 @@ const HowToExplore = () => {
           <h1>HOW TO EXPLORE</h1>
         </div>
       </div>
+
       {/* Main Content */}
       <div className="section-container">
         {/* Curated Itineraries */}
@@ -27,8 +28,8 @@ const HowToExplore = () => {
               <h2 className="section-title">Curated Itineraries</h2>
               <p className="section-paragraph">
                 Plan your perfect getaway with our expertly crafted itineraries!
-                Start by planning based on your preferred
-                destinations, travel dates, and experiences with the{" "}
+                Start by planning based on your preferred destinations, travel
+                dates, and experiences with the{" "}
                 <strong>NALAZURI TRAVELS</strong>. If you love what you see,
                 reach out to our friendly team, and we’ll refine every detail to
                 create a seamless, personalized itinerary just for you. Whether
@@ -50,10 +51,6 @@ const HowToExplore = () => {
                   <span>Personalized service</span>
                 </div>
               </div>
-              {/* <button className="primary-button">
-                <span>Generate Estimated Invoice</span>
-                <i className="fas fa-arrow-right"></i>
-              </button> */}
             </div>
             <div className="half-width image-box">
               <img
@@ -78,7 +75,7 @@ const HowToExplore = () => {
                 the best times to visit each park, ensuring you make the most of
                 your journey. Whether you're looking for a group to join or a
                 structured solo-friendly itinerary, you’ll find the perfect
-                adventure waiting
+                adventure waiting.
               </p>
               <div className="bullet-list">
                 <div className="bullet-item">
@@ -100,7 +97,6 @@ const HowToExplore = () => {
                   <i className="fas fa-calendar-alt ml-2"></i>
                 </button>
               </a>
-
             </div>
             <div className="half-width image-box">
               <img
@@ -112,6 +108,7 @@ const HowToExplore = () => {
           </div>
         </section>
       </div>
+
       {/* How It Works Section */}
       <section className="how-it-works">
         <h2 className="section-title">How It Works</h2>
@@ -150,6 +147,7 @@ const HowToExplore = () => {
           </div>
         </div>
       </section>
+
       {/* Call to Action */}
       <section className="call-to-action">
         <h2>Ready to Start Your Journey?</h2>
@@ -157,20 +155,20 @@ const HowToExplore = () => {
           Whether you're seeking a curated experience or a solo adventure, we're
           here to make your Kenyan dream trip a reality.
         </p>
-       
       </section>
+
+      {/* Inquiries Button */}
       <div className="inquiry-link-container" style={{ textAlign: 'center', margin: '2rem 0' }}>
-  <a href="/inquiry">
-    <button className="primary-button">
-      <span>Submit an Inquiry</span>
-      <i className="fas fa-envelope ml-2"></i>
-    </button>
-  </a>
-</div>
+        <Link to="/Inquiries">
+          <button className="primary-button">
+            <span>Inquiries</span>
+            <i className="fas fa-envelope ml-2"></i>
+          </button>
+        </Link>
+      </div>
 
       <Footer />
     </div>
-    // </div>
   );
 };
 

@@ -2,14 +2,14 @@ import React from 'react';
 import Footer from "../components/Footer";
 import './Samburu National Reserve.css'; 
 import CoverPhoto from '../assets/CoverPhoto.jpeg';
-import samburu from '../assets/samburu.jpg'
+import Samburu10 from '../assets/Samburu 10.jpg'
 import Samburu1 from '../assets/Samburu 1.jpeg'; 
 //import Samburu2 from '../assets/Samburu 2.jpg';
 import Samburu3 from '../assets/Samburu 3.jpg';
 import Samburu4 from '../assets/Samburu 4.jpg';
 //import Samburu5 from '../assets/Samburu 5.jpg';
-import Samburu6 from '../assets/Samburu 6.jpeg'; 
-import Samburu8 from '../assets/Samburu 8.jpg';
+import Samburu6 from '../assets/Samburu 6.jpg'; 
+import Samburu8 from '../assets/Samburu 8.JPG';
 import Samburu9 from '../assets/Samburu 9.jpeg';
 
 import SamburuGallery1 from '../assets/Samburu Gallery 1.jpg'; 
@@ -45,7 +45,7 @@ const Samburu = () => {
         <h2 className="gallery-title">Samburu Gallery</h2>
         <div className="image-gallery">
           <img src={Samburu1} alt="Samburu 1" />
-          { <img src={Samburu} alt="Samburu " /> }
+          { <img src={Samburu10} alt="Samburu 10" /> }
           <img src={Samburu3} alt="Samburu 3" />
           <img src={Samburu4} alt="Samburu 4" />
           {/* <img src={Samburu5} alt="Samburu 5" /> */}

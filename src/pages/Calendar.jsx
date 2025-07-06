@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import "../pages/Calendar.css"
 import Footer from "../components/Footer";
 import TsavoGallery3 from '../assets/Tsavo gallery 3.jpg';
-import Samburu1 from '../assets/Samburu 1.jpg';
+import Samburu1 from '../assets/Samburu 1.jpeg';
 import MaasaiMaraGallery6 from '../assets/Maasai Mara Gallery 6.jpg';
-import AmboseliGallery4 from '../assets/Amboseli Gallery 4.jpeg';
+import AmboseliGallery4 from '../assets/Amboseli Gallery 4.jpg';
 
 const Calendar = () => {
   console.log("Calendar component rendered");

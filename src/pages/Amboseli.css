@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     height: 100vh; /* Increased height */
-    background-image: url('../assets/Amboseli Cover Photo.jpeg');
+    background-image: url('../assets/Amboseli Cover Photo.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
