@@ -1,17 +1,35 @@
 import React from 'react';
 import Footer from "../components/Footer";
 import './Meru.css'; 
+
 import CoverPhoto from '../assets/Meru Cover Photo.jpg'; 
 import Meru1 from '../assets/Meru 1.jpg'; 
 import Meru2 from '../assets/Meru 2.jpg';
 import Meru3 from '../assets/Meru 3.jpg';
+import Meru6 from '../assets/Meru 6.jpg';
+import Meru7 from '../assets/Meru 7.JPG';
+import Meru8 from '../assets/Meru 8.jpg';
+import Meru9 from '../assets/Meru 9.jpg';
+import Meru10 from '../assets/Meru 10.JPG';
 import MeruElephants from '../assets/Meru Elephants.jpg';
+
+const galleryImages = [
+  { src: Meru1, alt: "Scenic view in Meru National Park" },
+  { src: Meru2, alt: "Wildlife including giraffes in Meru National Park" },
+  { src: Meru3, alt: "Grasslands and hills in Meru National Park" },
+  { src: Meru6, alt: "Meandering river in Meru National Park" },
+  { src: Meru7, alt: "Sunset view in Meru National Park" },
+  { src: Meru8, alt: "Lion in the wild at Meru National Park" },
+  { src: Meru9, alt: "Bird species in Meru National Park" },
+  { src: Meru10, alt: "Elephants roaming in Meru National Park" },
+  { src: MeruElephants, alt: "Elephant herd in Meru National Park" },
+];
 
 const Meru = () => {
   return (
     <div className="meru-national-park">
       {/* Hero Section */}
-      <div 
+      <section 
         className="hero-section-meru" 
         style={{ backgroundImage: `url(${CoverPhoto})` }} 
         aria-label="Cover photo of Meru National Park"
@@ -39,12 +57,12 @@ const Meru = () => {
       <section className="gallery-section" aria-label="Meru National Park photo gallery">
         <h2 className="gallery-title">Meru Gallery</h2>
         <div className="image-gallery">
-          <img src={Meru1} alt="View of Meru National Park" />
-          <img src={Meru2} alt="Wildlife in Meru National Park" />
-          <img src={Meru3} alt="Landscape in Meru National Park" />
-          <img src={MeruElephants} alt="Elephants in Meru National Park" />
+          {galleryImages.map((img, index) => (
+            <img key={index} src={img.src} alt={img.alt} />
+          ))}
         </div>
       </section>
+
       <Footer />
     </div>
   );

@@ -159,6 +159,15 @@ const HowToExplore = () => {
         </p>
        
       </section>
+      <div className="inquiry-link-container" style={{ textAlign: 'center', margin: '2rem 0' }}>
+  <a href="/inquiry">
+    <button className="primary-button">
+      <span>Submit an Inquiry</span>
+      <i className="fas fa-envelope ml-2"></i>
+    </button>
+  </a>
+</div>
+
       <Footer />
     </div>
     // </div>

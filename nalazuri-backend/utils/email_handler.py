@@ -45,6 +45,7 @@ Custom Experience: {data.get('customExperience', '')}
 Accommodation: {data.get('accommodation', '')}
 Travelers: {data.get('travelers', '')}
 Children in Group: {data.get('hasChildren', '')}
+Number of Children: {data.get('numberOfChildren', '')}
 Children Ages: {data.get('childrenAges', '')}
 
 Values:
@@ -65,7 +66,7 @@ Sent via Nalazuri Website Form
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(SENDER_EMAIL, SENDER_PASSWORD)
             smtp.send_message(msg)
-        print("✅ Email sent successfully.")
+        print("Email sent successfully.")
         return True
     except Exception as e:
         print(f" Error sending email: {e}")

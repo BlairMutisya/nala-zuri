@@ -129,12 +129,22 @@ const Inquiry = () => {
           <input type="date" name="fromDate" onChange={handleChange} />
           <input type="date" name="toDate" onChange={handleChange} />
         </div>
-        <label>Are your dates flexible?</label>
-        <select name="flexibleDates" onChange={handleChange}>
-          <option value="">Select</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
+       <label>Are your dates flexible?</label>
+<select name="flexibleDates" onChange={handleChange}>
+  <option value="">Select</option>
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+</select>
+
+{formData.flexibleDates === 'Yes' && (
+  <input
+    type="text"
+    name="flexibleDateDetails"
+    placeholder="Please specify how flexible your dates are"
+    onChange={handleChange}
+  />
+)}
+
         <label>Trip Duration</label>
         <select name="tripDuration" onChange={handleChange}>
           <option value="">Select Duration</option>
@@ -147,9 +157,9 @@ const Inquiry = () => {
         <h3>🗺️ Destination & Experience</h3>
         <div className="destination-list">
           {[
-            "Maasai Mara", "Tsavo East", "Tsavo West", "Lake Nakuru National Park",
-            "Nairobi National Park", "Amboseli National Park", "Samburu National Reserve",
-            "Meru National Park", "Kilifi", "Diani Beach", "Lamu", "Not sure yet"
+           "Amboseli National Park", "Lake Nakuru National Park", "Maasai Mara", "Meru National Park",
+           "Nairobi National Park", "Tsavo East", "Tsavo West","Samburu National Reserve",
+            "Kilifi", "Diani Beach", "Lamu","Watamu", "Not sure yet", "Other (please specify)"
           ].map(dest => (
             <div key={dest} className="destination-row">
               <span className="destination-label">{dest}</span>
@@ -186,15 +196,30 @@ const Inquiry = () => {
 
         <h3> Group Details</h3>
         <input type="number" name="travelers" placeholder="How many people are traveling?" onChange={handleChange} />
-        <label>Are there children in your group?</label>
-        <select name="hasChildren" onChange={handleChange}>
-          <option value="">Select</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-        {formData.hasChildren === 'Yes' && (
-          <input type="text" name="childrenAges" placeholder="Please specify ages" onChange={handleChange} />
-        )}
+      <label>Are there children in your group?</label>
+<select name="hasChildren" onChange={handleChange}>
+  <option value="">Select</option>
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+</select>
+
+{formData.hasChildren === 'Yes' && (
+  <>
+    <input
+      type="number"
+      name="numberOfChildren"
+      placeholder="Number of children"
+      onChange={handleChange}
+    />
+    <input
+      type="text"
+      name="childrenAges"
+      placeholder="Please specify ages"
+      onChange={handleChange}
+    />
+  </>
+)}
+
 
         <h3> Accommodation</h3>
         <label>Preferred Accommodation Type</label>

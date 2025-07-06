@@ -70,11 +70,13 @@ const OurStory = () => {
               <h3>Mercy Wanjiku & Teresa Palacios</h3>
               <p className="role">CO-Founders</p>
               <p>
-              Visionary leaders with a deep passion for travel. They founded
-                Nalazuri Travels to create meaningful travel experiences that
-                connect people with nature, culture, and local communities. They
-                are committed to sustainable tourism and ensuring that every
-                journey has a positive impact.
+              Nalazuri Travels was founded by two passionate individuals who first met in Nairobi, united by a shared vision 
+              of travel that gives back. Teresa brings a wealth of experience from her work with local communities and NGOs, 
+              as well as her time as a travel consultant in Tanzania. Mercy, a Kenyan environmentalist, is deeply committed 
+              to sustainability and loves uncovering hidden, beautiful gems off the beaten path. Her passion for nature and 
+              exploration perfectly complements Teresa’s community-focused approach. Together, their combined backgrounds 
+              fuel Nalazuri’s mission: to create unforgettable journeys that leave a lasting, positive impact on people and 
+              the planet.
               </p>
             </div>
           </div>

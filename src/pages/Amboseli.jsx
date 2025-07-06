@@ -2,8 +2,8 @@ import React from 'react';
 import Footer from "../components/Footer";
 
 import './Amboseli.css'; // Import your CSS file for styling
-import AmboseliCoverPhoto from '../assets/Amboseli Cover Photo.jpeg'; 
-import Amboseli1 from '../assets/Amboseli 1.jpeg'; 
+import AmboseliCoverPhoto from '../assets/Amboseli Cover Photo.jpg'; 
+import Amboseli1 from '../assets/Amboseli 1.jpg'; 
 import Amboseli2 from '../assets/Amboseli 2.jpg';
 import Amboseli3 from '../assets/Amboseli 3.jpg';
 import Amboseli4 from '../assets/Amboseli 4.jpg';
