@@ -9,6 +9,8 @@ import Antelope from "../assets/Antelope.jpg"
 import GroupPhoto from '../assets/Group.jpg';
 import Lion from '../assets/Lion.jpeg';
 import Zebra from "../assets/Meru (2).JPG"
+import Cheeetah from "../assets/Cheeetah.JPG"
+import Gazelle from "../assets/Gazelle.jpeg"
 
 import Footer from "../components/Footer";
 
@@ -120,6 +122,12 @@ const LandingPage = () => {
             {
               img: Zebra,
             },
+            {
+              img: Cheeetah
+            },
+            {
+              img: Gazelle
+            }
           ].map((item, index) => (
             <div className="featured-card" key={index}>
               <div className="featured-overlay"></div>
