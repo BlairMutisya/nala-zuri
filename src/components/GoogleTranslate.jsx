@@ -6,7 +6,7 @@ const GoogleTranslate = () => {
       window.googleTranslateElementInit = () => {
         if (window.google && window.google.translate) {
           new window.google.translate.TranslateElement(
-            { pageLanguage: "en" },
+            { pageLanguage: "en", includedLanguages: "en,fr,es,zh-CN"},
             "google_translate_element"
           );
         }

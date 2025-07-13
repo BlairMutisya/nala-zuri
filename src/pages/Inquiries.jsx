@@ -158,7 +158,7 @@ const Inquiry = () => {
         <div className="destination-list">
           {[
            "Amboseli National Park", "Lake Nakuru National Park", "Maasai Mara", "Meru National Park",
-           "Nairobi National Park", "Tsavo East", "Tsavo West","Samburu National Reserve",
+           "Nairobi National Park", "OlPejeta", "Tsavo East", "Tsavo West","Samburu National Reserve",
             "Kilifi", "Diani Beach", "Lamu","Watamu", "Not sure yet", "Other (please specify)"
           ].map(dest => (
             <div key={dest} className="destination-row">
