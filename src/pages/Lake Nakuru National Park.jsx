@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../components/Footer";
 import './LakeNakuru.css'; 
-import CoverPhoto from '../assets/Lake Nakuru cover photo.jpg'; 
+import LakeNakuruCoverPhoto from '../assets/LakeNakuruCoverPhoto.jpg'; 
 import LakeNakuru1 from '../assets/Lake Nakuru 1.jpg'; 
 import LakeNakuru2 from '../assets/Lake Nakuru 2.jpg';
 import LakeNakuru3 from '../assets/Lake Nakuru 3.jpg';
@@ -21,7 +21,7 @@ const LakeNakuru = () => {
       {/* Hero Section */}
       <div 
         className="hero-section-lake-nakuru" 
-        style={{ backgroundImage: `url(${CoverPhoto})` }} 
+        style={{ backgroundImage: `url(${LakeNakuruCoverPhoto})` }} 
         aria-label="Cover photo of Lake Nakuru"
       >
         {/* Empty div for background image */}

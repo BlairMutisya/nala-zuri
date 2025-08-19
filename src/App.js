@@ -37,7 +37,7 @@ function App() {
         <Route path="/when-and-where" element={<WhenAndWhere />} />
         <Route path="/amboseli" element={<Amboseli />} />
         <Route path="/tsavo" element={<Tsavo />} />
-        <Route path="/nakuru" element={<LakeNakuru />} />
+        <Route path="/lake-nakuru" element={<LakeNakuru />} />
         <Route path="/samburu" element={<Samburu />} />
         <Route path="/nairobi" element={<Nairobi />} />
         <Route path="/meru" element={<Meru />} />

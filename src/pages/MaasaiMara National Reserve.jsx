@@ -9,7 +9,7 @@ import MaasaiMara4 from '../assets/Maasai Mara 4.jpg';
 import MaasaiMara5 from '../assets/Maasai mara 5.jpg'; 
 import MaasaiMaraGallery2 from '../assets/Maasai Mara Gallery 2.jpg'; 
 import MaasaiMaraGallery3 from '../assets/Maasai Mara Gallery 3.jpeg'; 
-import MaasaiMaraGallery4 from '../assets/Maasai Mara Gallery 4.jpeg'; 
+//import MaasaiMaraGallery4 from '../assets/Maasai Mara Gallery 4.jpeg'; 
 import MaasaiMaraGallery5 from '../assets/Maasai Mara Gallery 5.jpeg'; 
 import MaasaiMaraGallery6 from '../assets/Maasai Mara Gallery 6.jpg';
 
@@ -46,7 +46,7 @@ const MaasaiMara = () => {
           <img src={MaasaiMara5} alt="Maasai cultural experience" />
           <img src={MaasaiMaraGallery2} alt="Scenic view of Maasai Mara plains" />
           <img src={MaasaiMaraGallery3} alt="Elephants crossing in Maasai Mara" />
-          <img src={MaasaiMaraGallery4} alt="Maasai Mara sunset" />
+          {/* <img src={MaasaiMaraGallery4} alt="Maasai Mara sunset" /> */}
           <img src={MaasaiMaraGallery5} alt="Zebras grazing in Maasai Mara" />
           <img src={MaasaiMaraGallery6} alt="River crossing during migration" />
         </div>
