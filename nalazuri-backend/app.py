@@ -6,16 +6,22 @@ from utils.email_handler import send_inquiry_email
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/inquiry', methods=['POST'])
-def inquiry():
-    data = request.get_json()  # Get the incoming form data
+@app.route('/api/send_inquiry', methods=['POST'])
+def send_inquiry():
+    try:
+        data = request.json
+        if not data:
+            return jsonify({"success": False, "error": "No data provided"}), 400
 
-    if send_inquiry_email(data):  # Send email using the provided data
-        return jsonify({"message": "Email sent successfully!"}), 200  # Return success response
-    else:
-        return jsonify({"error": "Failed to send email"}), 500  # Error response if email failed
+        success = send_inquiry_email(data)
+        if success:
+            return jsonify({"success": True, "message": "Email sent successfully"})
+        else:
+            return jsonify({"success": False, "error": "Failed to send email"}), 500
 
-if __name__ == '__main__':
-    import os
-    port = int(os.environ.get("PORT", 5000))  
-    app.run(host='0.0.0.0', port=port, debug=True)
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+if __name__ == "__main__":
+    app.run(port=5000, debug=True)

@@ -1,4 +1,4 @@
-#!/home/sandie/nala-zuri/nala-zuri/nalazuri-backend/venv/bin/python
+#!/home/sandie/nala-zuri/nalazuri-backend/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
