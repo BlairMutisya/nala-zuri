@@ -19,9 +19,62 @@
 .env.production.local
 .env
 
-# .env
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.qodo
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env/
+.venv/
+env.bak/
+venv.bak/
+
+# Flask
+instance/
+.webassets-cache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Environment variables
 .env
+.env.*
+!.env.example
+
+# Database
+*.db
+*.sqlite3
+
+# Temporary files
+temp/
+tmp/
