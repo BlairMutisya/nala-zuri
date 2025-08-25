@@ -66,7 +66,7 @@ const Inquiry = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://nala-zuri-2.onrender.com/api/inquiry', {
+      const response = await fetch('http://localhost:5000/api/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

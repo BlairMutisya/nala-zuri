@@ -1,72 +1,102 @@
+# email_handler.py
 import smtplib
-from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 import os
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
-
-SENDER_EMAIL = os.getenv("SENDER_EMAIL")
-SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
-
-def determine_recipient(inquiry_type):
-    recipients = {
-        "general": "info@nalazuritravels.com",
-        "booking": "bookings@nalazuritravels.com",
-        "support": "support@nalazuritravels.com",
-        "mercy": "mercy@nalazuritravels.com",
-        "teressa": "teressa@nalazuritravels.com"
-    }
-    return recipients.get(inquiry_type.lower(), "info@nalazuritravels.com")
 
 def send_inquiry_email(data):
-    recipient_email = determine_recipient(data.get("inquiryType", "general"))
-
-    msg = MIMEMultipart()
-    msg['From'] = SENDER_EMAIL
-    msg['To'] = recipient_email
-    msg['Subject'] = f"New Safari Inquiry: {data.get('fullName', 'Unknown')}"
-
-    body = f"""
-🐘 New Safari Inquiry 🐘
-
-Full Name: {data.get('fullName', '')}
-Email: {data.get('email', '')}
-Phone: {data.get('phone', '')}
-Country: {data.get('country', '')}
-Preferred Contact Method: {data.get('contactMethod', '')}
-Dates: {data.get('fromDate', '')} to {data.get('toDate', '')}
-Flexible Dates: {data.get('flexibleDates', '')}
-Trip Duration: {data.get('tripDuration', '')}
-Destinations: {', '.join(data.get('destinations', []))}
-Experiences: {', '.join(data.get('experiences', []))}
-Custom Experience: {data.get('customExperience', '')}
-Accommodation: {data.get('accommodation', '')}
-Travelers: {data.get('travelers', '')}
-Children in Group: {data.get('hasChildren', '')}
-Children Ages: {data.get('childrenAges', '')}
-
-Values:
-  - Supporting local communities: {data.get('values', {}).get('localSupport', 'N/A')}/5
-  - Sustainable and eco-friendly travel: {data.get('values', {}).get('ecoTravel', 'N/A')}/5
-  - Cultural immersion and learning: {data.get('values', {}).get('culture', 'N/A')}/5
-  - Comfort and relaxation: {data.get('values', {}).get('comfort', 'N/A')}/5
-
-Notes: {data.get('notes', '')}
-
--------------------------
-Sent via Nalazuri Website Form
-    """
-
-    msg.attach(MIMEText(body, 'plain'))
-
     try:
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(SENDER_EMAIL, SENDER_PASSWORD)
-            smtp.send_message(msg)
-        print("✅ Email sent successfully.")
+        sender_email = os.environ.get("SENDER_EMAIL")
+        sender_password = os.environ.get("SENDER_PASSWORD")
+
+        if not sender_email or not sender_password:
+            print("Missing SENDER_EMAIL or SENDER_PASSWORD in .env")
+            return False
+
+        traveler_email = data.get("email")  # email from form
+        receiver_email = sender_email       # your inbox (you receive inquiries)
+
+        
+        # 1) Email TO YOU
+        
+        subject_owner = f"New Safari Inquiry from {data.get('fullName')}"
+        body_owner = f"""
+        You have received a new safari inquiry:
+
+        Name: {data.get('fullName')}
+        Email: {data.get('email')}
+        Phone: {data.get('phone')}
+        Country: {data.get('country')}
+        Preferred Contact: {data.get('contactMethod')} ({data.get('otherContactMethod')})
+        Travel Dates: {data.get('fromDate')} to {data.get('toDate')}
+        Flexible Dates: {data.get('flexibleDates')}
+        Trip Duration: {data.get('tripDuration')}
+
+        Destinations: {", ".join(data.get('destinations', []))}
+        Experiences: {", ".join(data.get('experiences', []))}
+        Custom Experience: {data.get('customExperience')}
+
+        Accommodation: {data.get('accommodation')}
+        Travelers: {data.get('travelers')}
+        Has Children: {data.get('hasChildren')}
+        Children Ages: {data.get('childrenAges')}
+
+        Values:
+            - Local Support: {data.get('values', {}).get('localSupport')}
+            - Eco Travel: {data.get('values', {}).get('ecoTravel')}
+            - Culture: {data.get('values', {}).get('culture')}
+            - Comfort: {data.get('values', {}).get('comfort')}
+
+        Notes:
+        {data.get('notes')}
+        """
+
+        msg_owner = MIMEMultipart()
+        msg_owner["From"] = sender_email
+        msg_owner["To"] = receiver_email
+        msg_owner["Subject"] = subject_owner
+        msg_owner.attach(MIMEText(body_owner, "plain"))
+
+        
+        # 2) Email TO TRAVELER
+        
+        subject_traveler = "Thank you for your Safari Inquiry with Nalazuri Travels"
+        body_traveler = f"""
+        Hi {data.get('fullName')},
+
+        Thank you for reaching out to Nalazuri Travels!🎉
+        We’ve received your safari inquiry and our team is excited to craft a personalized safari experience for you.
+        One of our safari experts will review your preferences and get back to you shortly with a tailored proposal.
+        In the meantime, if you have any urgent questions, feel free to reply to this email.
+
+        Best regards,  
+        The Nalazuri Travels Team
+        """
+
+        msg_traveler = MIMEMultipart()
+        msg_traveler["From"] = sender_email
+        msg_traveler["To"] = traveler_email
+        msg_traveler["Subject"] = subject_traveler
+        msg_traveler.attach(MIMEText(body_traveler, "plain"))
+
+        
+        # Send both emails via Gmail
+        
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(sender_email, sender_password)
+
+        # send to you
+        server.sendmail(sender_email, receiver_email, msg_owner.as_string())
+        # send confirmation to traveler
+        if traveler_email:
+            server.sendmail(sender_email, traveler_email, msg_traveler.as_string())
+
+        server.quit()
+
+        print("Inquiry + confirmation emails sent successfully")
         return True
+
     except Exception as e:
-        print(f" Error sending email: {e}")
+        print("Error sending emails:", e)
         return False
