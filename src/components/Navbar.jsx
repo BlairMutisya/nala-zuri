@@ -235,7 +235,7 @@ const Navbar = () => {
                 }
               }}
             >
-              WHEN & WHERE ▾
+              WHERE ▾
             </div>
 
             {dropdownOpen && (
