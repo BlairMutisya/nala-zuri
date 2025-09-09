@@ -1,9 +1,14 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from utils.email_handler import send_inquiry_email
+from threading import Thread
 
 app = Flask(__name__)
 CORS(app)
+
+def async_send_email(data):
+    """Run email sending in the background"""
+    send_inquiry_email(data)
 
 @app.route('/api/inquiry', methods=['POST'])
 def inquiry():
@@ -13,12 +18,11 @@ def inquiry():
         if not data:
             return jsonify({"error": "No data received"}), 400
 
-        success = send_inquiry_email(data)
+        # Start background thread for email sending
+        Thread(target=async_send_email, args=(data,), daemon=True).start()
 
-        if success:
-            return jsonify({"message": "Email sent successfully!"}), 200
-        else:
-            return jsonify({"error": "Failed to send email"}), 500
+        # Respond immediately (no waiting for email)
+        return jsonify({"message": "Inquiry received! We'll be in touch shortly."}), 200
 
     except Exception as e:
         print(" Backend error:", e)
