@@ -7,6 +7,9 @@ import TsavoGallery3 from '../assets/Tsavo gallery 3.jpg';
 import Samburu1 from '../assets/Samburu 1.jpeg';
 import MaasaiMaraGallery6 from '../assets/Maasai Mara Gallery 6.jpg';
 import AmboseliGallery4 from '../assets/Amboseli Gallery 4.jpg';
+import Nairobi2 from '../assets/Nairobi 2.jpeg';
+import Nairobi6 from '../assets/Nairobi 6.jpg';
+import Nairobi1 from '../assets/Nairobi 1.jpg'
 
 const Calendar = () => {
   console.log("Calendar component rendered");
@@ -60,7 +63,45 @@ const Calendar = () => {
       color: "bg-blue-500",
       lightColor: "bg-blue-100",
     },
+  
+  {
+  id: 5,
+  month: "October",
+  year: 2025,
+  location: "Nairobi National Park",
+  dates: "Sunday, 5th October 2025",
+  description:
+    "Morning game drive to explore the park’s diverse wildlife and learn about its conservation history.",
+  image: Nairobi1, // 👉 replace with a Nairobi NP image if you have one
+  color: "bg-green-600",
+  lightColor: "bg-green-100",
+},
+{
+  id: 6,
+  month: "November",
+  year: 2025,
+  location: "Nairobi National Park",
+  dates: "Sunday, 2nd November 2025",
+  description:
+    "Experience the unique contrast of wilderness and cityscape, with opportunities to spot predators and large herbivores.",
+  image: Nairobi2,
+  color: "bg-green-600",
+  lightColor: "bg-green-100",
+},
+{
+  id: 7,
+  month: "December",
+  year: 2025,
+  location: "Nairobi National Park",
+  dates: "Sunday, 7th December 2025",
+  description:
+    "Birdwatching and ecological appreciation during the green season, with focus on conservation initiatives.",
+  image: Nairobi6,
+  color: "bg-green-600",
+  lightColor: "bg-green-100",
+},
   ];
+
 
 
   const renderCalendarDays = (month, year, highlightDays) => {

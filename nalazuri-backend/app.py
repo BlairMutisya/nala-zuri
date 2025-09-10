@@ -8,7 +8,14 @@ CORS(app)
 
 def async_send_email(data):
     """Run email sending in the background"""
-    send_inquiry_email(data)
+    try:
+        success = send_inquiry_email(data)
+        if success:
+            print(" Email thread finished successfully")
+        else:
+            print(" Email thread failed")
+    except Exception as e:
+        print(" Error in async_send_email:", e)
 
 @app.route('/api/inquiry', methods=['POST'])
 def inquiry():
@@ -28,7 +35,9 @@ def inquiry():
         print(" Backend error:", e)
         return jsonify({"error": "Internal server error"}), 500
 
+@app.route('/api/health', methods=['GET'])
+def health():
+    return jsonify({"status": "ok"}), 200
 
 if __name__ == "__main__":
-    # Runs locally on http://localhost:5000
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)

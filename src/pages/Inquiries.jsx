@@ -89,7 +89,7 @@ const Inquiry = () => {
     <div className="inquiry-page">
       <div className="hero-section-inquiry" style={{ backgroundImage: `url(${CoverPhoto})` }}>
         <div className="hero-overlay-inquiry">
-          <h1>your African Safari awaits</h1>
+          <h1>Your African Safari awaits</h1>
           <p>Let us tailor an unforgettable experience through Kenya's wild beauty.</p>
         </div>
       </div>
