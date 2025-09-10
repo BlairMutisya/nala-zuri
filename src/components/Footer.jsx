@@ -6,16 +6,16 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
+          {/* Brand / Socials */}
           <div className="footer-section">
             <h3 className="footer-title">Nalazuri Travels</h3>
             <p className="footer-description">
               Promoting sustainable travel and environmental conservation since 2025.
             </p>
             <div className="footer-socials">
-
               <a
                 href="https://www.instagram.com/nalazuritravels/"
-                target=""
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-instagram"></i>
@@ -23,6 +23,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links */}
           <div className="footer-section">
             <h3 className="footer-title">Quick Links</h3>
             <ul className="footer-links">
@@ -34,6 +35,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Partners */}
           <div className="footer-section">
             <h3 className="footer-title">Our Partners</h3>
             <ul className="footer-links">
@@ -49,6 +51,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact */}
           <div className="footer-section">
             <h3 className="footer-title">Contact Us</h3>
             <ul className="footer-contact">
@@ -56,15 +59,20 @@ const Footer = () => {
                 <i className="fas fa-map-marker-alt"></i> Lantana road, Westlands
               </li>
               <li>
-                <i className="fas fa-envelope"></i> info@nalazuritravels.com
+                <i className="fas fa-envelope"></i>{" "}
+                <a href="mailto:info@nalazuritravels.com">
+                  info@nalazuritravels.com
+                </a>
               </li>
               <li>
-                <i className="fas fa-phone"></i> +254 797 106436
+                <i className="fas fa-phone"></i>{" "}
+                <a href="tel:+254797106436">+254 797 106436</a>
               </li>
             </ul>
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="footer-bottom">
           <p>© 2025 Nalazuri Travels. All rights reserved.</p>
           <div className="footer-policies">

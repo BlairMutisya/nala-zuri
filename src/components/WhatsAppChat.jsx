@@ -1,5 +1,6 @@
 import React from "react";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import  "./WhatsAppChat.css";
 
 const WhatsAppChat = () => {
     return (
@@ -13,6 +14,7 @@ const WhatsAppChat = () => {
         allowClickAway
         notification
         notificationSound
+        
       />
     );
 };

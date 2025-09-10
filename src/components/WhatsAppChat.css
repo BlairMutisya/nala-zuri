@@ -1,0 +1,46 @@
+/* Footer container */
+.floating-whatsapp-chatbox footer {
+  display: flex !important;
+  align-items: center !important;   /* centers vertically */
+  padding: 6px 8px !important;
+  background: #f0f2f5 !important;
+  border-top: 1px solid #ddd !important;
+}
+
+/* Input field */
+.floating-whatsapp-chatbox footer input {
+  flex: 1 !important;
+  padding: 10px 12px !important;
+  font-size: 14px !important;
+  border: none !important;
+  border-radius: 20px !important;
+  outline: none !important;
+  background: #fff !important;
+  margin-right: 8px !important;   /* space before arrow */
+  line-height: 18px !important;
+}
+
+/* Send button (arrow only, aligned with input) */
+.floating-whatsapp-chatbox footer button {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;   /* vertical center */
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+/* Arrow icon */
+.floating-whatsapp-chatbox footer button svg {
+  width: 22px !important;
+  height: 22px !important;
+  fill: #54656f !important; /* WhatsApp Web arrow color */
+  transition: fill 0.2s ease-in-out !important;
+}
+
+/* Hover effect */
+.floating-whatsapp-chatbox footer button:hover svg {
+  fill: #25d366 !important; /* green when hovered */
+}
